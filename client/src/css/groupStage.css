@@ -1,0 +1,160 @@
+*{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.wrapper .main .mainContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:90% ;
+    color: #fff;
+    margin-bottom: 3rem;
+   
+    
+
+}
+.wrapper .main .mainContainer .container-info{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 80%;
+    margin: 2rem;
+
+}
+.wrapper .main .mainContainer .container-info .world-cup-logo{
+    margin-left:2rem;
+    margin-right:4rem;
+    width: 30%;
+
+}
+.wrapper .main .mainContainer .container-info .container-info-heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 70%;
+    font-size: 100%;
+    text-transform: uppercase;
+    text-align: center;
+
+}
+.wrapper .main .mainContainer .gridContainer{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 10px;
+    
+}
+.wrapper .main .mainContainer .gridContainer .mainItem .column-selector{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    user-select: none;
+    padding: 10px;
+    margin: 0px 0px 8px 0px;
+    min-height: 10px;
+    background-color: #fff;
+    font-weight: bolder;
+}
+.wrapper .main .mainContainer .gridContainer .mainItem .column-selector .flag-img{
+    margin-right: 10px;
+    background-color: #fff;
+    width:30px;
+    height: 30px;
+}
+.wrapper .main .mainContainer .gridContainer .mainItem .column-selector .content{
+    font-size: 1.1rem;
+    background-color: #fff;
+    color: #800020;
+}
+.wrapper .main .mainContainer .gridContainer .mainItem .column-selector .position{
+    margin: 0px 5px;
+    font-size: 1.1rem;
+    background-color: #fff;
+    color: #800020;
+}
+.wrapper .main .mainContainer .container-btn{
+    width: 40%;
+    background-color: #49bce4;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    padding: 12px;
+    margin: 2rem 0rem;
+    color: #1077C3;
+    border: none;
+    text-align: center;
+    border: 1px solid #007700;
+    border-radius: 10px;
+}
+.wrapper .main .mainContainer .container-btn:hover{
+    cursor: pointer;
+    color:#FFDF00;
+    
+
+
+}
+@media (max-width: 1200px){
+    .wrapper .main .mainContainer{
+        width:95% ;
+        
+    }
+    .wrapper .main .mainContainer .container-info{
+        width: 90%;
+    
+    }
+    .wrapper .main .mainContainer .container-info .world-cup-logo{
+        width: 40%;
+        margin-right:2rem;
+    
+    }
+    .wrapper .main .mainContainer .container-info .container-info-heading{
+        width: 60%;
+        font-size: 80%;
+
+    }
+    .wrapper .main .mainContainer .gridContainer{
+        grid-template-columns: auto auto auto;
+        gap: 5px;
+        
+    }
+    .wrapper .main .mainContainer .gridContainer .mainItem .column-selector{
+        padding: 8px;
+        min-height: 8px;
+    }
+    .wrapper .main .mainContainer .gridContainer .mainItem .column-selector .flag-img{
+        margin-right: 8px;
+        width:25px;
+        height: 25px;
+    }
+    .wrapper .main .mainContainer .gridContainer .mainItem .column-selector .content{
+        font-size: 100%;
+    }
+    .wrapper .main .mainContainer .gridContainer .mainItem .column-selector .position{
+        margin: 0px 3px;
+        font-size: 100%;
+    }
+    .wrapper .main .mainContainer .container-btn{
+        width: 80%;
+      
+    }
+}
+@media (max-width: 800px){
+    .wrapper .main .mainContainer .container-info .container-info-heading{
+        width: 80%;
+        font-size: 40%;
+
+    }
+    .wrapper .main .mainContainer .gridContainer{
+        grid-template-columns: auto auto;
+        
+    }
+    .wrapper .main .mainContainer .container-btn{
+        width: 100%;
+        font-size: 100%;
+    }
+}
+@media (max-width: 550px){
+    .wrapper .main .mainContainer .gridContainer{
+        grid-template-columns: auto;
+        
+    }
+}

@@ -1,0 +1,262 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.wrapper{
+    width: 100%;
+    position: relative;
+    min-height:100%;
+    background-color: #800020;
+}
+.wrapper .main{
+    padding-bottom: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.wrapper .main .container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #222;
+    background-image: url("../img/fifa-qatar-2022-logo.png");
+    position: relative;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    height: 70vh;
+    background-position: center;
+    image-resolution: from-image 300dpi;
+    color: #fff;
+    background-blend-mode: lighten;
+    padding-bottom: 20%;
+
+}
+
+.wrapper .main .container .wrapper-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    width: 95%;
+    height: 60vh;
+
+}
+.wrapper .main .container .wrapper-container .content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin-top: 25%;
+    flex-direction: row;
+    line-height: normal;
+    
+}
+.wrapper .main .container .wrapper-container .content .info{
+    width: 30%;
+    font-weight: bolder;
+    text-overflow: clip;
+}
+.wrapper .main .container .wrapper-container .content .info h3{
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-overflow: clip;
+}
+.wrapper .main .container .wrapper-container .content .info .btn{
+    width: 100%;
+    background-color: #49bce4;
+    font-size: 1.5rem;
+    font-weight:bolder;
+    padding: 12px;
+    color: #1077C3;
+    border: none;
+    text-align: center;
+    border: 1px solid #007700;
+    border-radius: 10px;
+}
+.wrapper .main .container .wrapper-container .content .info .btn:hover{
+    cursor: pointer;
+    color:#FFDF00;
+
+}
+.wrapper .header{
+    background-color: #1077C3;
+    color: #FFDF00;
+    padding: 1rem;
+    padding-left: 2rem;
+
+}
+.wrapper .header .content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.wrapper .header .content .title a h1{
+    font-size: 1.8rem;
+    padding-left: 1rem;
+}
+.wrapper .header .content .navs{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 30%;
+
+}
+.wrapper .header .content .navs .nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.wrapper .header .content .navs .nav img{
+    border-radius: 50%;
+    width:50px;
+    height: 50px;
+
+}
+.wrapper .header .content .title a{
+    color: #FFDF00;
+    text-decoration: none;
+}
+.wrapper .footer{
+    background-color: #1077C3;
+    color: #FFDF00;
+    bottom: 0;
+    width: 100%;
+    position: absolute;
+    height: 6rem;
+    text-align: center;
+    
+
+
+}
+.wrapper .footer .content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    padding-left: 2rem;
+    font-size: 100%;
+    background-color: #1077C3;
+
+}
+.wrapper .footer .content .title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 40%;
+    
+}
+.wrapper .footer .content .navs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 30%;
+
+}
+.wrapper .footer .content .navs .nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.wrapper .footer .content .navs .nav .link{
+    color: #FFDF00;
+    text-decoration: none;
+}
+.wrapper .footer .content .navs .nav .link:hover{
+    color: #800020;
+
+}
+
+@media (max-width: 1200px){
+    .wrapper .main{
+        padding-bottom: 6rem;
+        justify-content: flex-start;
+
+    }
+    .wrapper .main .container{
+        padding-bottom: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-position:bottom;
+        
+    
+    }
+    
+    .wrapper .main .container .wrapper-container{
+        justify-content: center;
+        align-items: flex-start;
+        padding: none;
+        width: 95%;
+    
+    }
+    .wrapper .main .container .wrapper-container .content{
+        justify-content: space-between;
+        align-items: flex-end;
+        width: 90%;
+        margin-top: 2rem;
+        flex-direction: column;
+        line-height: 1.6;
+        
+    }
+    .wrapper .main .container .wrapper-container .content .info{
+        width: 100%;
+        font-weight: bolder;
+    }
+    .wrapper .main .container .wrapper-container .content .info h3{
+        font-size: 1.2rem;
+    }
+    .wrapper .header .content .title a h1{
+        font-size: 1.5rem;
+    }
+    .wrapper .footer .content{
+        padding-left: none;
+        font-size: 100%;
+        flex-direction:column ;
+    
+    }
+    .wrapper .footer .content .title{
+        width: 90%;
+        
+    }
+    .wrapper .footer .content .navs{
+        width: 90%;
+    
+    }
+
+}
+@media (max-width: 600px){
+    .wrapper .header .content .title a h1{
+        font-size: 1.2rem;
+    }
+    .wrapper .footer .content{
+        font-size: 80%;
+    
+    }
+    .wrapper .footer .content .title{
+        width: 95%;
+        
+    }
+    .wrapper .footer .content .navs{
+        width: 95%;
+    
+    }
+
+}
+@media (max-width: 500px){
+    .wrapper .header .content .title a h1{
+        font-size: 1rem;
+    }
+    .wrapper .footer .content{
+        font-size: 60%;
+    
+    }
+
+}

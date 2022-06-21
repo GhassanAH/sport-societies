@@ -1,0 +1,216 @@
+.wrapper .main .mainContainerRound16{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    color: #fff;
+}
+.wrapper .main .mainContainerRound16 .container-info-round16{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 80%;
+    margin: 1rem;
+
+}
+.wrapper .main .mainContainerRound16 .container-info-round16 .world-cup-logo-round16{
+    width: 30%;
+    margin-left:2rem;
+    margin-right:4rem;
+
+}
+.wrapper .main .mainContainerRound16 .container-info-round16 .container-info-heading-round16{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 70%;
+    font-size: 100%;
+    text-transform: uppercase;
+    text-align: center;
+
+}
+.wrapper .main .mainContainerRound16 .world-cup-trophy-round16{
+    width: 30%;
+    
+}
+.wrapper .main .mainContainerRound16 .gridContainerRound16{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 10px;
+    width: 100%;
+    font-size: 80%;
+    
+}
+.wrapper .main .mainContainerRound16 .gridContainerRound16 .mainItemRound16 .droppableRound16{
+    padding: 4px;
+    width: 250px;
+    height: 75px;
+    background-color: #FFD700;
+}
+.wrapper .main .mainContainerRound16 .gridContainerRound16 .mainItemRound16 .droppableRound16 .column-selector-round16{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    user-select: none;
+    padding: 2px;
+    margin: 0px 0px 3px 0px;
+    min-height: 5px;
+    background-color: #fff;
+    font-weight: bolder;
+}
+.wrapper .main .mainContainerRound16 .gridContainerRound16 .mainItemRound16 .droppableRound16 .column-selector-round16 .flag-img-round16{
+    margin-right: 10px;
+    background-color: #fff;
+    width:30px;
+    height: 30px;
+}
+.wrapper .main .mainContainerRound16 .gridContainerRound16 .mainItemRound16 .droppableRound16 .column-selector-round16 .contentRound16{
+    font-size: 1.1rem;
+    background-color: #fff;
+    color: #800020;
+}
+.wrapper .main .mainContainerRound16 .gridContainerRound16 .mainItemRound16 .droppableRound16 .column-selector-round16 .positionRound16{
+    margin: 0px 5px;
+    font-size: 1.1rem;
+    background-color: #fff;
+    color: #800020;
+}
+.wrapper .main .mainContainerRound16 .container-btn-round16{
+    width: 40%;
+    background-color: #49bce4;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    padding: 12px;
+    margin: 2rem 0rem;
+    color: #1077C3;
+    border: none;
+    text-align: center;
+    border: 1px solid #007700;
+    border-radius: 10px;
+}
+.wrapper .main .mainContainerRound16 .container-btn-round16:hover{
+    cursor: pointer;
+    color:#FFDF00;
+}
+@media (max-width: 1200px){
+    .wrapper .main .mainContainerRound16{
+        width: 95%;
+    }
+    .wrapper .main .mainContainerRound16 .container-info-round16{
+        width: 90%;
+    }
+    .wrapper .main .mainContainerRound16 .container-info-round16 .world-cup-logo-round16{
+        width: 40%;
+        margin-right:2rem;
+    
+    }
+    .wrapper .main .mainContainerRound16 .container-info-round16 .container-info-heading-round16{
+        width: 60%;
+        font-size: 80%;
+    }
+    .wrapper .main .mainContainerRound16 .gridContainerRound16{
+        gap: 10px;
+        width: 90%;
+        font-size: 70%;
+        
+    }
+    .wrapper .main .mainContainerRound16 .gridContainerRound16 .mainItemRound16 .droppableRound16{
+        padding: 3px;
+        width: 180px;
+        height: 55px;
+    }
+    .wrapper .main .mainContainerRound16 .gridContainerRound16 .mainItemRound16 .droppableRound16 .column-selector-round16{
+        min-height: 22px;
+    }
+    .wrapper .main .mainContainerRound16 .gridContainerRound16 .mainItemRound16 .droppableRound16 .column-selector-round16 .flag-img-round16{
+        margin-right: 6px;
+        width:20px;
+        height: 20px;
+    }
+    .wrapper .main .mainContainerRound16 .gridContainerRound16 .mainItemRound16 .droppableRound16 .column-selector-round16 .contentRound16{
+        font-size: 80%;
+    }
+    .wrapper .main .mainContainerRound16 .gridContainerRound16 .mainItemRound16 .droppableRound16 .column-selector-round16 .positionRound16{
+        font-size: 80%;
+    }
+    .wrapper .main .mainContainerRound16 .container-btn-round16{
+        width: 90%;
+        font-size: 100%;
+    }
+}
+@media (max-width: 900px){
+    .wrapper .main .mainContainerRound16 .container-info-round16 .container-info-heading-round16{
+        font-size: 50%;
+    }
+    .wrapper .main .mainContainerRound16 .gridContainerRound16 .mainItemRound16 .droppableRound16{
+        width: 100px;
+    }
+    .wrapper .main .mainContainerRound16 .container-info-round16 .world-cup-logo-round16{
+        width: 30%;
+        margin-right: 1rem;
+    
+    }
+    .wrapper .main .mainContainerRound16 .container-info-round16 .container-info-heading-round16{
+        font-size: 70%;
+        width: 70%;
+    }
+    .wrapper .main .mainContainerRound16 .gridContainerRound16{
+        font-size: 50%;
+        
+    }
+    .wrapper .main .mainContainerRound16 .gridContainerRound16 .mainItemRound16 .droppableRound16 .column-selector-round16 .contentRound16{
+        font-size: 90%;
+    }
+    .wrapper .main .mainContainerRound16 .gridContainerRound16 .mainItemRound16 .droppableRound16 .column-selector-round16 .positionRound16{
+        font-size: 90%;
+    }
+    .wrapper .main .mainContainerRound16 .container-btn-round16{
+        font-size: 90%;
+    }
+}
+@media (max-width: 600px){
+    .wrapper .main .mainContainerRound16 .gridContainerRound16 .mainItemRound16 .droppableRound16 .column-selector-round16 .flag-img-round16{
+        width:15px;
+        height: 15px;
+    }
+    .wrapper .main .mainContainerRound16 .container-btn-round16{
+        font-size: 70%;
+    }
+}
+@media (max-width: 550px){
+    .wrapper .main .mainContainerRound16 .gridContainerRound16{
+        font-size: 40%;
+        
+    }
+}
+@media (max-width: 500px){
+    .wrapper .main .mainContainerRound16 .gridContainerRound16 .mainItemRound16 .droppableRound16{
+        width: 150px;
+    }
+    .wrapper .main .mainContainerRound16 .container-info-round16 .container-info-heading-round16{
+        font-size: 30%;
+    }
+    .wrapper .main .mainContainerRound16 .gridContainerRound16{
+        grid-template-columns: auto auto;
+        
+    }
+}
+@media (max-width: 350px){
+    .wrapper .main .mainContainerRound16 .gridContainerRound16 .mainItemRound16 .droppableRound16 .column-selector-round16 .flag-img-round16{
+        width:12px;
+        height: 12px;
+    }
+    .wrapper .main .mainContainerRound16{
+        width: 100%;
+    }
+    .wrapper .main .mainContainerRound16 .gridContainerRound16 .mainItemRound16 .droppableRound16{
+        width: 80px;
+    }
+    .wrapper .main .mainContainerRound16 .gridContainerRound16{
+        grid-template-columns: auto auto;
+        gap: 1px;
+        
+    }
+}

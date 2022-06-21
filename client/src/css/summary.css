@@ -1,0 +1,444 @@
+.mainContainerSummary{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin: 0!important;
+    background-color: #800020;
+}
+.mainContainerSummary .main-wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #800020;
+}
+.mainContainerSummary .main-wrapper .container-info-Summary{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 80%;
+    margin: 1rem;
+    color: #fff;
+
+}
+.mainContainerSummary .main-wrapper .container-info-Summary .world-cup-logo-Summary{
+    width: 20%;
+    margin-left:2rem;
+    margin-right:4rem;
+
+}
+.mainContainerSummary .main-wrapper .container-info-Summary .container-info-heading-Summary{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+.mainContainerSummary .main-wrapper .summary-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    
+}
+.mainContainerSummary .main-wrapper .summary-container .gridContainerSummary{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    
+}
+.mainContainerSummary .main-wrapper .summary-container .gridContainerSummary .mainItemSummary{
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 10px;
+    margin: 1rem;
+    width: 20%;
+    color: #000;
+}
+.mainContainerSummary .main-wrapper .summary-container .gridContainerSummary .mainItemSummary h3{
+    font-size: 1rem; 
+}
+.mainContainerSummary .main-wrapper .summary-container .gridContainerSummary .mainItemSummary  .column-selector-Summary{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    user-select: none;
+    padding: 2px;
+    margin: 0px 0px 3px 0px;
+    min-height: 5px;
+    background-color: #fff;
+    font-weight: bolder;
+}
+.mainContainerSummary .main-wrapper .summary-container .gridContainerSummary .mainItemSummary  .column-selector-Summary .flag-img-Summary{
+    margin-right: 10px;
+    background-color: #fff;
+    width:30px;
+    height: 30px;
+}
+.mainContainerSummary .main-wrapper .summary-container .gridContainerSummary .mainItemSummary  .column-selector-Summary .contentSummary{
+    font-size: 1.1rem;
+    background-color: #fff;
+    color: #800020;
+
+}
+.mainContainerSummary .main-wrapper .summary-container .gridContainerSummary .mainItemSummary  .column-selector-Summary .positionSummary{
+    margin: 0px 5px;
+    font-size: 1.1rem;
+    background-color: #fff;
+    color: #800020;
+}
+
+.mainContainerSummary .main-wrapper .summary-container .roundContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+.mainContainerSummary .main-wrapper .summary-container .roundContainer .grid2ContainerSummary{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    font-size:1.1rem;
+    
+}
+.mainContainerSummary .main-wrapper .summary-container .roundContainer .grid2ContainerSummary .main2ItemSummary{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 1rem;
+    color: #000;
+    width: 80%;
+
+}
+.mainContainerSummary .main-wrapper .summary-container .roundContainer .grid2ContainerSummary .main2ItemSummary h3{
+    text-align: center;
+}
+.mainContainerSummary .main-wrapper .summary-container .roundContainer .grid2ContainerSummary .main2ItemSummary .box{
+    background-color: #fff;
+    padding: 10px;
+    margin: 1rem 1rem;
+    border-radius: 12px;
+    width: 20%;
+
+
+   
+}
+.mainContainerSummary .main-wrapper .summary-container .roundContainer .grid2ContainerSummary .main2ItemSummary .box h3{
+   font-size: 1rem;
+
+   
+}
+.mainContainerSummary .main-wrapper .summary-container .roundContainer .grid2ContainerSummary .main2ItemSummary  .box .column-selector-Summary{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    user-select: none;
+    padding: 5px;
+    margin: 0px 0px 3px 0px;
+    width: auto;
+    background-color: #fff;
+    font-weight: bolder;
+
+
+}
+.mainContainerSummary .main-wrapper .summary-container .roundContainer .grid2ContainerSummary .main2ItemSummary  .box .column-selector-Summary .flag-img-Summary{
+    margin-right: 10px;
+    background-color: #fff;
+    width:40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.mainContainerSummary .main-wrapper .summary-container .roundContainer .grid2ContainerSummary .main2ItemSummary  .box .column-selector-Summary .world-img-Summary{
+
+    background-color: #fff;
+    width:60px;
+    height: 80px;
+}
+.mainContainerSummary .main-wrapper .summary-container .roundContainer .grid2ContainerSummary .main2ItemSummary  .box .column-selector-Summary .contentSummary{
+    background-color: #fff;
+    color: #800020;
+
+}
+.mainContainerSummary .main-wrapper .summary-container .roundContainer .grid2ContainerSummary .main2ItemSummary  .box .column-selector-Summary .positionSummary{
+    margin: 0px 5px;
+    background-color: #fff;
+    color: #800020;
+}
+.mainContainerSummary .container-btn-Summary{
+    width: 40%;
+    background-color: gold;
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 12px;
+    margin: 2rem 0rem;
+    color:#007700;
+    border: none;
+    text-align: center;
+    border-radius: 2px;
+    border: 6px solid #222;
+    border-radius: 10px;
+}
+.mainContainerSummary .container-btn-Summary:hover{
+    cursor: pointer;
+    color: #222;
+    border: 6px solid #007700;
+}
+
+@media (max-width: 1300px) {
+
+    .mainContainerSummary .main-wrapper .container-info-Summary{
+        width: 100%;
+        margin: .5rem;
+    
+    }
+    .mainContainerSummary .main-wrapper .container-info-Summary .world-cup-logo-Summary{
+        width: 30%;
+        margin-left:.5rem;
+        margin-right:1rem;
+    
+    }
+    .mainContainerSummary .main-wrapper .container-info-Summary .container-info-heading-Summary{
+        width: 70%;
+        font-size: .8rem;
+    }
+    .mainContainerSummary .main-wrapper .summary-container .gridContainerSummary{
+        width: 90%;
+        
+    }
+    .mainContainerSummary .main-wrapper .summary-container .gridContainerSummary .mainItemSummary{
+        border-radius: 9px;
+        padding: 10px;
+        margin: .5rem;
+        width: 23%;
+    }
+    .mainContainerSummary .main-wrapper .summary-container .gridContainerSummary .mainItemSummary h3{
+        font-size: .7rem; 
+    }
+    .mainContainerSummary .main-wrapper .summary-container .gridContainerSummary .mainItemSummary  .column-selector-Summary .flag-img-Summary{
+        width:20px;
+        height: 20px;
+    }
+    .mainContainerSummary .main-wrapper .summary-container .gridContainerSummary .mainItemSummary  .column-selector-Summary .contentSummary{
+        font-size: .7rem;
+    
+    }
+    .mainContainerSummary .main-wrapper .summary-container .gridContainerSummary .mainItemSummary  .column-selector-Summary .positionSummary{
+        font-size: .7rem;
+    }
+    
+    .mainContainerSummary .main-wrapper .summary-container .roundContainer{
+        width: 90%;
+    }
+    .mainContainerSummary .main-wrapper .summary-container .roundContainer .grid2ContainerSummary{
+        margin-top: 1.2rem;
+        font-size:.8rem;
+        
+    }
+    .mainContainerSummary .main-wrapper .summary-container .roundContainer .grid2ContainerSummary .main2ItemSummary{
+        margin: .5rem;
+        width: 90%;
+    
+    }
+    .mainContainerSummary .main-wrapper .summary-container .roundContainer .grid2ContainerSummary .main2ItemSummary .box{
+        padding: 5px;
+        margin: .5rem .2rem;
+        border-radius: 9px;
+    
+       
+    }
+    .mainContainerSummary .main-wrapper .summary-container .roundContainer .grid2ContainerSummary .main2ItemSummary .box h3{
+        font-size: .7rem;
+     
+        
+     }
+    .mainContainerSummary .main-wrapper .summary-container .roundContainer .grid2ContainerSummary .main2ItemSummary  .box .column-selector-Summary .flag-img-Summary{
+        width:20px;
+        height: 20px;
+    }
+    .mainContainerSummary  .container-btn-Summary{
+        width: 90%;
+        font-size: 1rem;
+
+    }
+    
+}
+@media (max-width: 800px) {
+    .mainContainerSummary .main-wrapper .container-info-Summary{
+        width: 100%;
+        margin: .3rem;
+    
+    }
+    .mainContainerSummary .main-wrapper .container-info-Summary .world-cup-logo-Summary{
+        width: 30%;
+        margin-left:.3rem;
+        margin-right:.7rem;
+    
+    }
+    .mainContainerSummary .main-wrapper .container-info-Summary .container-info-heading-Summary{
+        width: 70%;
+        font-size: .6rem;
+    }
+    .mainContainerSummary .main-wrapper .summary-container .gridContainerSummary{
+        width: 95%;
+        
+    }
+    .mainContainerSummary .main-wrapper .summary-container .gridContainerSummary .mainItemSummary{
+        border-radius: 6px;
+        padding: 5px;
+        margin: .4rem;
+        width: 24%;
+    }
+    .mainContainerSummary .main-wrapper .summary-container .gridContainerSummary .mainItemSummary h3{
+        font-size: .6rem; 
+    }
+    .mainContainerSummary .main-wrapper .summary-container .gridContainerSummary .mainItemSummary  .column-selector-Summary .flag-img-Summary{
+        width:15px;
+        height: 15px;
+    }
+    .mainContainerSummary .main-wrapper .summary-container .gridContainerSummary .mainItemSummary  .column-selector-Summary .contentSummary{
+        font-size: .65rem;
+    
+    }
+    .mainContainerSummary .main-wrapper .summary-container .gridContainerSummary .mainItemSummary  .column-selector-Summary .positionSummary{
+        font-size: .65rem;
+    }
+    
+    .mainContainerSummary .main-wrapper .summary-container .roundContainer{
+        width: 95%;
+    }
+    .mainContainerSummary .main-wrapper .summary-container .roundContainer .grid2ContainerSummary{
+        margin-top: 1rem;
+        font-size:.65rem;
+        
+    }
+    .mainContainerSummary .main-wrapper .summary-container .roundContainer .grid2ContainerSummary .main2ItemSummary{
+        margin: .5rem;
+        width: 95%;
+    
+    }
+    .mainContainerSummary .main-wrapper .summary-container .roundContainer .grid2ContainerSummary .main2ItemSummary .box{
+        padding: 5px;
+        margin: .3rem .2rem;
+        border-radius: 6px;
+    
+       
+    }
+    .mainContainerSummary .main-wrapper .summary-container .roundContainer .grid2ContainerSummary .main2ItemSummary .box h3{
+        font-size: .6rem;
+     
+        
+     }
+    .mainContainerSummary .main-wrapper .summary-container .roundContainer .grid2ContainerSummary .main2ItemSummary  .box .column-selector-Summary .flag-img-Summary{
+        width:10px;
+        height: 10px;
+    }
+    .mainContainerSummary .container-btn-Summary{
+        width: 80%;
+        font-size: .8rem;
+
+    }
+}
+@media (max-width: 600px) {
+    .mainContainerSummary .main-wrapper .container-info-Summary{
+        width: 100%;
+        margin: .2rem;
+    
+    }
+    .mainContainerSummary .main-wrapper .container-info-Summary .world-cup-logo-Summary{
+        width: 25%;
+        margin-left:.3rem;
+        margin-right:.4rem;
+    
+    }
+    .mainContainerSummary .main-wrapper .container-info-Summary .container-info-heading-Summary{
+        width: 75%;
+        font-size: .5rem;
+    }
+    .mainContainerSummary .main-wrapper .summary-container .gridContainerSummary{
+        width: 95%;
+        
+    }
+    .mainContainerSummary .main-wrapper .summary-container .gridContainerSummary .mainItemSummary{
+        border-radius: 6px;
+        padding: 5px;
+        margin: .1rem;
+        width: 25%;
+    }
+    .mainContainerSummary .main-wrapper .summary-container .gridContainerSummary .mainItemSummary h3{
+        font-size: .4rem; 
+    }
+    .mainContainerSummary .main-wrapper .summary-container .gridContainerSummary .mainItemSummary  .column-selector-Summary .flag-img-Summary{
+        width:10px;
+        height: 10px;
+        margin-right: 2px;
+    }
+    .mainContainerSummary .main-wrapper .summary-container .gridContainerSummary .mainItemSummary  .column-selector-Summary .contentSummary{
+        font-size: .4rem;
+    
+    }
+    .mainContainerSummary .main-wrapper .summary-container .gridContainerSummary .mainItemSummary  .column-selector-Summary .positionSummary{
+        font-size: .4rem;
+        margin-right: 2px;
+    }
+    
+    .mainContainerSummary .main-wrapper .summary-container .roundContainer{
+        width: 95%;
+    }
+    .mainContainerSummary .main-wrapper .summary-container .roundContainer .grid2ContainerSummary{
+        margin-top: 2rem;
+        font-size:.4rem;
+        
+    }
+    .mainContainerSummary .main-wrapper .summary-container .roundContainer .grid2ContainerSummary .main2ItemSummary{
+        margin: 0rem .2rem;
+        width: 100%;
+    
+    }
+    .mainContainerSummary .main-wrapper .summary-container .roundContainer .grid2ContainerSummary .main2ItemSummary .box{
+        padding: 2px;
+        margin: .2rem .1rem;
+        border-radius: 4px;
+        width: 25%;
+    
+       
+    }
+    .mainContainerSummary .main-wrapper .summary-container .roundContainer .grid2ContainerSummary .main2ItemSummary  .box .column-selector-Summary{
+        padding: 5px;
+        margin: 0px 0px 5px 0px;
+        width: 21%;
+    
+    
+    }
+    .mainContainerSummary .main-wrapper .summary-container .roundContainer .grid2ContainerSummary .main2ItemSummary .box h3{
+        font-size: .4rem;
+     
+        
+     }
+    .mainContainerSummary .main-wrapper .summary-container .roundContainer .grid2ContainerSummary .main2ItemSummary  .box .column-selector-Summary .flag-img-Summary{
+        width:15px;
+        height: 15px;
+        margin-right: 2px;
+    }
+    .mainContainerSummary .main-wrapper .summary-container .roundContainer .grid2ContainerSummary .main2ItemSummary  .box .column-selector-Summary .world-img-Summary{
+        width:30px;
+        height: 40px;
+    }
+    .mainContainerSummary .main-wrapper .summary-container .roundContainer .grid2ContainerSummary .main2ItemSummary  .box .column-selector-Summary .positionSummary{
+        margin: 0px 2px;
+    }
+    .mainContainerSummary .container-btn-Summary{
+        width: 80%;
+        font-size: .7rem;
+
+    }
+}
