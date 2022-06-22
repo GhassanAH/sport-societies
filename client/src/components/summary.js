@@ -166,7 +166,7 @@ const Summary = ({data, data2, data3, data4,data5,data6}) => {
                                                 key={columnId}
                                                 className="box"
                                                 >
-                                                    <h3>{column.name}</h3>
+                                                    <h3>Round of 16 {column.name}</h3>
                                                     <div>
                                                         {column.items.map((item, index) => {
                                                             return(
@@ -329,7 +329,7 @@ const Summary = ({data, data2, data3, data4,data5,data6}) => {
                                                 key={columnId}
                                                 className="box"
                                                 >
-                                                    <h3>{column.name}</h3>
+                                                    <h3>Round of 16 {column.name}</h3>
                                                     <div>
                                                         {column.items.map((item, index) => {
                                                             return(

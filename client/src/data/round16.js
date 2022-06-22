@@ -27,7 +27,7 @@ firstH, secondH
     const id16 = "Game 8 16r"
    return { 
     [id1]:{
-        name:"Round of 16 Game 1",
+        name:"Game 1",
         items:[firstA, secondB,]
     },
     [id2]:{
@@ -35,7 +35,7 @@ firstH, secondH
         items:[]
     },
     [id5]:{
-        name:"Round of 16 Game 2",
+        name:"Game 2",
         items:[firstC, secondD,]
     },
     [id6]:{
@@ -43,7 +43,7 @@ firstH, secondH
         items:[]
     },
     [id7]:{
-        name:"Round of 16 Game 3",
+        name:"Game 3",
         items:[firstD, secondC,]
     },
     [id8]:{
@@ -51,7 +51,7 @@ firstH, secondH
         items:[]
     },
     [id3]:{
-        name:"Round of 16 Game 4",
+        name:"Game 4",
         items:[firstB, secondA,]
     },
     [id4]:{
@@ -59,31 +59,31 @@ firstH, secondH
         items:[]
     },    
     [id9]:{
-        name:"Round of 16 Game 5",
+        name:"Game 5",
         items:[firstE, secondF,]
     },
     [id10]:{
-        name:"Winner of 16 Game 5",
+        name:"Winner of Game 5",
         items:[]
     },
     [id13]:{
-        name:"Round of 16 Game 6",
+        name:"Game 6",
         items:[firstG, secondH,]
     },
     [id14]:{
-        name:"Winner of 16 Game 6",
+        name:"Winner of Game 6",
         items:[]
     },   
     [id11]:{
-        name:"Round of 16 Game 7",
+        name:"Game 7",
         items:[firstF, secondE,]
     },
     [id12]:{
-        name:"Winner of 16 Game 7",
+        name:"Winner of Game 7",
         items:[]
     },   
     [id15]:{
-        name:"Round of 16 Game 8",
+        name:"Game 8",
         items:[firstH, secondG]
     },
     [id16]:{

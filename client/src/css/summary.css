@@ -45,6 +45,7 @@
     align-items: center;
     flex-direction: column;
     width: 100%;
+    margin-bottom: 2rem;
     
 }
 .mainContainerSummary .main-wrapper .summary-container .gridContainerSummary{

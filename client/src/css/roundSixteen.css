@@ -113,7 +113,7 @@
     .wrapper .main .mainContainerRound16 .gridContainerRound16{
         gap: 10px;
         width: 90%;
-        font-size: 70%;
+        font-size: 60%;
         
     }
     .wrapper .main .mainContainerRound16 .gridContainerRound16 .mainItemRound16 .droppableRound16{
@@ -156,10 +156,6 @@
         font-size: 70%;
         width: 70%;
     }
-    .wrapper .main .mainContainerRound16 .gridContainerRound16{
-        font-size: 50%;
-        
-    }
     .wrapper .main .mainContainerRound16 .gridContainerRound16 .mainItemRound16 .droppableRound16 .column-selector-round16 .contentRound16{
         font-size: 90%;
     }
@@ -181,7 +177,7 @@
 }
 @media (max-width: 550px){
     .wrapper .main .mainContainerRound16 .gridContainerRound16{
-        font-size: 40%;
+        font-size: 50%;
         
     }
 }
@@ -198,6 +194,10 @@
     }
 }
 @media (max-width: 350px){
+    .wrapper .main .mainContainerRound16 .gridContainerRound16{
+        font-size: 40%;
+        
+    }
     .wrapper .main .mainContainerRound16 .gridContainerRound16 .mainItemRound16 .droppableRound16 .column-selector-round16 .flag-img-round16{
         width:12px;
         height: 12px;
@@ -206,7 +206,7 @@
         width: 100%;
     }
     .wrapper .main .mainContainerRound16 .gridContainerRound16 .mainItemRound16 .droppableRound16{
-        width: 80px;
+        width: 80%;
     }
     .wrapper .main .mainContainerRound16 .gridContainerRound16{
         grid-template-columns: auto auto;
