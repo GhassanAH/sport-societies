@@ -15,6 +15,7 @@ import { useNavigate } from "react-router-dom";
 const Fianl = ({data5, onSaveWinner}) => {
 
     const [final, setFinalData] = useState(data5)
+    const [alertState, setOpenAlert] = useState(false)
     let navigate = useNavigate();
 
 
@@ -68,17 +69,22 @@ const Fianl = ({data5, onSaveWinner}) => {
     const onConfirmSelection = () =>{
         let data = []
         Object.entries(final).forEach(([coulmnID, column]) => {
-          if(coulmnID.includes("r")){
+          if(coulmnID.includes("r") && column.items.length !== 0){
             data.push(column.items[0])
           }
           
         })
-        const winnerw = winner(
-          data[0]
-
-      )
-        onSaveWinner(winnerw)
-        navigate("/summary")
+        if(data.length === 1){
+            const winnerw = winner(
+                data[0]
+      
+            )
+              onSaveWinner(winnerw)
+              navigate("/summary")
+        }else{
+            setOpenAlert(true)
+        }
+    
     }
 
     return(
@@ -93,6 +99,12 @@ const Fianl = ({data5, onSaveWinner}) => {
                     </div>
                     
                 </div>
+                {alertState && 
+                    <div className="alert">
+                        <span className="closebtn" onClick={() => setOpenAlert(false)}>&times;</span>
+                        Please complete all winner boxes
+                    </div>
+                }
                <img src={trophy} alt="world cup trophy" className="world-cup-trophy-round16"></img>
                <div className="gridContainerRound16">
                         <DragDropContext

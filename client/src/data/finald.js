@@ -14,7 +14,7 @@ w_s1, w_s2,
         items:[w_s1, w_s2,]
     },
     [id2]:{
-        name:"Winner of The World Cup 2022",
+        name:"Winner",
         items:[]
     },
    

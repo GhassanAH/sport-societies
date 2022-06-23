@@ -14,6 +14,7 @@ import { useNavigate } from "react-router-dom";
 const Round16 = ({data2, onSave8}) => {
 
     const [round16Data, setRound16Data] = useState(data2)
+    const [alertState, setOpenAlert] = useState(false)
     let navigate = useNavigate();
 
 
@@ -67,19 +68,24 @@ const Round16 = ({data2, onSave8}) => {
     const onConfirmSelection = () =>{
         let data = []
         Object.entries(round16Data).forEach(([coulmnID, column]) => {
-          if(coulmnID.includes("r")){
+          if(column && coulmnID.includes("r") && column.items.length !== 0){
             data.push(column.items[0])
           }
           
         })
-        const round8data = round8(
-          data[4],data[5],
-          data[0],data[1],
-          data[6],data[7],
-          data[3],data[2],
-      )
-        onSave8(round8data)
-        navigate("/round8")
+        if(data.length === 8){
+            const round8data = round8(
+                data[4],data[5],
+                data[0],data[1],
+                data[6],data[7],
+                data[3],data[2],
+            )
+              onSave8(round8data)
+              navigate("/round8")
+        }else{
+            setOpenAlert(true)
+        }
+
     }
 
     return(
@@ -92,6 +98,12 @@ const Round16 = ({data2, onSave8}) => {
                         <h2>World Cup ROUND of 16</h2>
                     </div>
                 </div>
+                {alertState && 
+                    <div className="alert">
+                        <span className="closebtn" onClick={() => setOpenAlert(false)}>&times;</span>
+                        Please complete all winner boxes
+                    </div>
+                }
                <div className="gridContainerRound16">
                         <DragDropContext
                         onDragEnd={result => onDragEnd(result)}
@@ -110,6 +122,7 @@ const Round16 = ({data2, onSave8}) => {
                                     return (
                                         <div
                                         {...provided.droppableProps}
+                                        style={{ backgroundColor: snapshot.isDraggingOver ? '#49bce4' : '#FFD700' }}
                                         ref={provided.innerRef}
                                         className="droppableRound16"
                                         >

@@ -13,6 +13,7 @@ import { useNavigate } from "react-router-dom";
 const Round8 = ({data3, onSave4}) => {
 
     const [round8Data, setRound8Data] = useState(data3)
+    const [alertState, setOpenAlert] = useState(false)
     let navigate = useNavigate();
 
 
@@ -66,18 +67,24 @@ const Round8 = ({data3, onSave4}) => {
     const onConfirmSelection = () =>{
         let data = []
         Object.entries(round8Data).forEach(([coulmnID, column]) => {
-          if(coulmnID.includes("r")){
+          if(coulmnID.includes("r") && column.items.length !== 0){
             data.push(column.items[0])
           }
           
         })
-        const round4data = round4(
-          data[0],data[1],
-          data[2],data[3],
- 
-      )
-        onSave4(round4data)
-        navigate("/round4")
+        if(data.length === 4){
+            const round4data = round4(
+                data[0],data[1],
+                data[2],data[3],
+       
+             )
+              onSave4(round4data)
+              navigate("/round4")
+        }else{
+            setOpenAlert(true)
+        }
+
+
     }
 
     return(
@@ -90,6 +97,12 @@ const Round8 = ({data3, onSave4}) => {
                     <h2>World Cup Quarterfinals</h2>
                 </div>
             </div>
+            {alertState && 
+                    <div className="alert">
+                        <span className="closebtn" onClick={() => setOpenAlert(false)}>&times;</span>
+                        Please complete all winner boxes
+                    </div>
+            }
                <div className="gridContainerRound16">
                         <DragDropContext
                         onDragEnd={result => onDragEnd(result)}
