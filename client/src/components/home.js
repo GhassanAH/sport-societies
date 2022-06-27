@@ -1,6 +1,5 @@
 import React from 'react'
 import '../css/home.css'
-import profile from '../img/profile.png'
 import { useNavigate } from "react-router-dom";
 
 
@@ -18,7 +17,7 @@ const Home = () => {
                 <div className="content">
                     <div className="info">
                         <h3>FIFA WORLD CUP Qatar 2022. THE DREAM OF EVERY FOOTBALL FAN</h3>
-                        <a href="https://www.qatar2022.qa/en/home" target="_blank"><button className="btn">Visit The Website</button></a>
+                        <a href="https://www.qatar2022.qa/en/home" target="_blank" rel="noreferrer"><button className="btn">Visit The Website</button></a>
                     </div>
                     <div className ="info">
                         <h3>PREDICT YOUR FIFA WORLD CUP Qatar 2022 WINNER AND QUALIFIERS</h3>

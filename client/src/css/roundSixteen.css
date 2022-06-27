@@ -68,7 +68,7 @@
 .wrapper .main .mainContainerRound16 .gridContainerRound16 .mainItemRound16 .droppableRound16{
     padding: 4px;
     width: 250px;
-    height: 75px;
+    min-height: 90px;
     background-color: #FFD700;
 }
 .wrapper .main .mainContainerRound16 .gridContainerRound16 .mainItemRound16 .droppableRound16 .column-selector-round16{
@@ -85,8 +85,8 @@
 .wrapper .main .mainContainerRound16 .gridContainerRound16 .mainItemRound16 .droppableRound16 .column-selector-round16 .flag-img-round16{
     margin-right: 10px;
     background-color: #fff;
-    width:30px;
-    height: 30px;
+    width:50px;
+    height: 40px;
 }
 .wrapper .main .mainContainerRound16 .gridContainerRound16 .mainItemRound16 .droppableRound16 .column-selector-round16 .contentRound16{
     font-size: 1.1rem;
@@ -135,7 +135,7 @@
     .wrapper .main .mainContainerRound16 .gridContainerRound16{
         gap: 10px;
         width: 90%;
-        font-size: 60%;
+        font-size: 80%;
         
     }
     .wrapper .main .mainContainerRound16 .gridContainerRound16 .mainItemRound16 .droppableRound16{
@@ -144,7 +144,7 @@
         height: 55px;
     }
     .wrapper .main .mainContainerRound16 .gridContainerRound16 .mainItemRound16 .droppableRound16 .column-selector-round16{
-        min-height: 22px;
+        min-height: 40px;
     }
     .wrapper .main .mainContainerRound16 .gridContainerRound16 .mainItemRound16 .droppableRound16 .column-selector-round16 .flag-img-round16{
         margin-right: 6px;
@@ -165,6 +165,10 @@
 @media (max-width: 900px){
     .wrapper .main .mainContainerRound16 .container-info-round16 .container-info-heading-round16{
         font-size: 80%;
+    }
+    .wrapper .main .mainContainerRound16 .gridContainerRound16{
+        font-size: 60%;
+        
     }
     .wrapper .main .mainContainerRound16 .gridContainerRound16 .mainItemRound16 .droppableRound16{
         width: 100px;
@@ -276,7 +280,7 @@
         font-size: 30%;
     }
     .wrapper .main .mainContainerRound16 .gridContainerRound16{
-        font-size: 40%;
+        font-size: 50%;
         
     }
 

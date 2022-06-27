@@ -80,20 +80,20 @@
 .mainContainerSummary .main-wrapper .summary-container .gridContainerSummary .mainItemSummary  .column-selector-Summary .flag-img-Summary{
     margin-right: 10px;
     background-color: #fff;
-    width:30px;
-    height: 30px;
+    width:50px;
+    height: 40px;
 }
 .mainContainerSummary .main-wrapper .summary-container .gridContainerSummary .mainItemSummary  .column-selector-Summary .contentSummary{
     font-size: 1.1rem;
     background-color: #fff;
-    color: #800020;
+    color: #222;
 
 }
 .mainContainerSummary .main-wrapper .summary-container .gridContainerSummary .mainItemSummary  .column-selector-Summary .positionSummary{
     margin: 0px 5px;
     font-size: 1.1rem;
     background-color: #fff;
-    color: #800020;
+    color: #222;
 }
 
 .mainContainerSummary .main-wrapper .summary-container .roundContainer{
@@ -117,7 +117,7 @@
     justify-content: space-around;
     align-items: center;
     margin: 1rem;
-    color: #000;
+    color: #222;
     width: 80%;
 
 }
@@ -135,7 +135,7 @@
    
 }
 .mainContainerSummary .main-wrapper .summary-container .roundContainer .grid2ContainerSummary .main2ItemSummary .box h3{
-   font-size: 1rem;
+   font-size: 1.1rem;
 
    
 }
@@ -155,7 +155,7 @@
 .mainContainerSummary .main-wrapper .summary-container .roundContainer .grid2ContainerSummary .main2ItemSummary  .box .column-selector-Summary .flag-img-Summary{
     margin-right: 10px;
     background-color: #fff;
-    width:40px;
+    width:50px;
     height: 40px;
     border-radius: 50%;
 }
@@ -167,13 +167,13 @@
 }
 .mainContainerSummary .main-wrapper .summary-container .roundContainer .grid2ContainerSummary .main2ItemSummary  .box .column-selector-Summary .contentSummary{
     background-color: #fff;
-    color: #800020;
+    color: #222;
 
 }
 .mainContainerSummary .main-wrapper .summary-container .roundContainer .grid2ContainerSummary .main2ItemSummary  .box .column-selector-Summary .positionSummary{
     margin: 0px 5px;
     background-color: #fff;
-    color: #800020;
+    color: #222;
 }
 .mainContainerSummary .container-btn-Summary{
     width: 40%;

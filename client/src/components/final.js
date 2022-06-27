@@ -79,6 +79,8 @@ const Fianl = ({data5, onSaveWinner}) => {
                 data[0]
       
             )
+              const serializedwinnerw = JSON.stringify(winnerw);
+              window.localStorage.setItem('winner', serializedwinnerw);
               onSaveWinner(winnerw)
               navigate("/summary")
         }else{
@@ -124,6 +126,7 @@ const Fianl = ({data5, onSaveWinner}) => {
                                     return (
                                         <div
                                         {...provided.droppableProps}
+                                        style={{ backgroundColor: snapshot.isDraggingOver ? '#49bce4' : '#FFD700' }}
                                         ref={provided.innerRef}
                                         className="droppableRound16"
                                         >

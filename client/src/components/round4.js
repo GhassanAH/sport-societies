@@ -78,6 +78,8 @@ const Round4 = ({data4, onSaveFinal}) => {
                 data[0],data[1],
       
             )
+              const serializedfinal = JSON.stringify(round1data);
+              window.localStorage.setItem('final', serializedfinal);
               onSaveFinal(round1data)
               navigate("/final")
         }else{
@@ -132,12 +134,10 @@ const Round4 = ({data4, onSaveFinal}) => {
                                                 {(provided, snapshot) => {
                                                 return (
                                                     <div
+                                                    style={{ backgroundColor: snapshot.isDraggingOver ? '#49bce4' : '#FFD700' }}
                                                     ref={provided.innerRef}
                                                     {...provided.draggableProps}
                                                     {...provided.dragHandleProps}
-                                                    style={{
-                                                        ...provided.draggableProps.style
-                                                    }}
                                                     className="column-selector-round16"
                                                     >
 

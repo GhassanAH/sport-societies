@@ -78,6 +78,8 @@ const Round8 = ({data3, onSave4}) => {
                 data[2],data[3],
        
              )
+             const serializedround4 = JSON.stringify(round4data);
+             window.localStorage.setItem('round4', serializedround4);
               onSave4(round4data)
               navigate("/round4")
         }else{
@@ -121,6 +123,7 @@ const Round8 = ({data3, onSave4}) => {
                                     return (
                                         <div
                                         {...provided.droppableProps}
+                                        style={{ backgroundColor: snapshot.isDraggingOver ? '#49bce4' : '#FFD700' }}
                                         ref={provided.innerRef}
                                         className="droppableRound16"
                                         >

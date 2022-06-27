@@ -1,6 +1,5 @@
 import React from 'react'
 import '../css/home.css'
-import profile from '../img/profile.png'
 
 const Footer = () => {
     return (
@@ -13,14 +12,14 @@ const Footer = () => {
                 <div className="navs">
                     <h2>Report an issue</h2>
                     <div className="nav">
-                        <a href="mailto:gassanalhattali@gmail.com" className="link"><h4>gassanalhattali@gmail.com</h4></a>
+                        <a href="mailto:sportsocieties@gmail.com" className="link"><h4>sportsocieties@gmail.com</h4></a>
                     </div>
   
                 </div>
                 <div className="navs">
                     <h2>Contact us</h2>
                     <div className="nav">
-                        <a href="mailto:gassanalhattali@gmail.com" className="link"><h4>gassanalhattali@gmail.com</h4></a>
+                        <a href="mailto:sportsocieties@gmail.com" className="link"><h4>sportsocieties@gmail.com</h4></a>
                     </div>
   
                 </div>

@@ -80,6 +80,8 @@ const Round16 = ({data2, onSave8}) => {
                 data[6],data[7],
                 data[3],data[2],
             )
+              const serializedround8 = JSON.stringify(round8data);
+              window.localStorage.setItem('round8', serializedround8);
               onSave8(round8data)
               navigate("/round8")
         }else{

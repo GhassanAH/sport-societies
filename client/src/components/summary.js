@@ -58,7 +58,7 @@ const Summary = ({data, data2, data3, data4,data5,data6}) => {
         ])
 
 
-    },[])
+    },[data2, data3, data4, data5, data6])
 
     const onDownload = () => {
         const container = ref.current;
@@ -115,7 +115,7 @@ const Summary = ({data, data2, data3, data4,data5,data6}) => {
                                         )
                                      }
                                      else{
-                                        return
+                                        return <></>
                                     }
                         
                                    
@@ -151,7 +151,7 @@ const Summary = ({data, data2, data3, data4,data5,data6}) => {
                                         )
                                      }
                                      else{
-                                        return
+                                        return <></>
                                     }
                         
                                    

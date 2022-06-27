@@ -1,6 +1,6 @@
 import { FINAL } from "../actions/types"
 
-const choice5 = (state = null, action) => {
+const choice5 = (state = JSON.parse(localStorage.getItem("final")), action) => {
     switch(action.type){
         case FINAL:
             return action.payload || false

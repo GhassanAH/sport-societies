@@ -11,19 +11,19 @@ w_q3, w_q4,
     const id4 = "Game 2 4r"
    return { 
     [id1]:{
-        name:"Game  1",
+        name:"Game 1",
         items:[w_q1, w_q2,]
     },
     [id2]:{
-        name:"Winner of Game  1",
+        name:"Winner of Game 1",
         items:[]
     },
     [id3]:{
-        name:"Game  2",
+        name:"Game 2",
         items:[w_q3, w_q4,]
     },
     [id4]:{
-        name:"Winner of Semifinal  2",
+        name:"Winner of Game 2",
         items:[]
     },
    

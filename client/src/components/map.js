@@ -64,6 +64,10 @@ const WorldMap = ({onSaveGroups, onSave16}) => {
             data[12],data[13],
             data[14],data[15],
         )
+          const serializedGroups = JSON.stringify(DataColumns);
+          window.localStorage.setItem('groups', serializedGroups);
+          const serializedround16 = JSON.stringify(round16data);
+          window.localStorage.setItem('round16', serializedround16);
           onSaveGroups(DataColumns)
           onSave16(round16data)
           navigate("/round16")
