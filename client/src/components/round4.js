@@ -120,6 +120,7 @@ const Round4 = ({data4, onSaveFinal}) => {
                                     {(provided, snapshot) => {
                                     return (
                                         <div
+                                        style={{ backgroundColor: snapshot.isDraggingOver ? '#49bce4' : '#FFD700' }}
                                         {...provided.droppableProps}
                                         ref={provided.innerRef}
                                         className="droppableRound16"
@@ -134,7 +135,9 @@ const Round4 = ({data4, onSaveFinal}) => {
                                                 {(provided, snapshot) => {
                                                 return (
                                                     <div
-                                                    style={{ backgroundColor: snapshot.isDraggingOver ? '#49bce4' : '#FFD700' }}
+                                                    style={{
+                                                        ...provided.draggableProps.style
+                                                    }}
                                                     ref={provided.innerRef}
                                                     {...provided.draggableProps}
                                                     {...provided.dragHandleProps}
