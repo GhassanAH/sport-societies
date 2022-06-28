@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { connect } from 'react-redux'
 import {saveGrops, save16} from '../actions'
 import round16 from '../data/round16'
+import { Helmet } from 'react-helmet-async';
 
 
 
@@ -75,12 +76,19 @@ const WorldMap = ({onSaveGroups, onSave16}) => {
     
    
     return (
+           <>
+           <Helmet>
+                <title>World Cup Qatar 2022 | Groups Stage Prediction</title>
+                <meta name="description" content="Pick the first team, the second team, the third team and the fourth team in every group"/>
+                <meta name="keywords" content="Groups, World cup Qatar 2022, Groups stage, prediction"/>
+                <link rel="canonical" href="/groupsStage"/>
+           </Helmet>
             <div className="mainContainer">
                     <div className="container-info">
                         <img src={fifa} alt="fifa world cup logo" className="world-cup-logo"></img>
                         <div className="container-info-heading">
-                            <h1>WORLD CUP QATAR 2022</h1>
-                            <h2>World Cup Groups</h2>
+                            <h2>WORLD CUP QATAR 2022</h2>
+                            <h3>Groups</h3>
                         </div>
                     </div>
                     
@@ -152,6 +160,7 @@ const WorldMap = ({onSaveGroups, onSave16}) => {
                     </div>
                     <button className="container-btn" onClick={onConfirmSelection}>Go To Round 16</button>
                 </div>
+           </>
         )
     
 

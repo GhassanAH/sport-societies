@@ -6,6 +6,7 @@ import { connect } from 'react-redux'
 import {save8} from '../actions'
 import round8 from '../data/round8'
 import { useNavigate } from "react-router-dom";
+import { Helmet } from 'react-helmet-async';
 
 
 
@@ -92,12 +93,18 @@ const Round16 = ({data2, onSave8}) => {
 
     return(
         <>
+        <Helmet>
+                <title>World Cup Qatar 2022 | Round of 16 Predictions</title>
+                <meta name="description" content="Pick the ROUND of 16 qualifiers in the World Cup Qatar 2022"/>
+                <meta name="keywords" content="Round of 16, Quarterfinal, World cup Qatar 2022, Round of 16 stage, prediction"/>
+                <link rel="canonical" href="/round16"/>
+        </Helmet>
         { round16Data &&  <div className="mainContainerRound16">
                 <div className="container-info-round16">
                     <img src={fifa} alt="fifa world cup logo" className="world-cup-logo-round16"></img>
                     <div className="container-info-heading-round16">
-                        <h1>WORLD CUP QATAR 2022</h1>
-                        <h2>World Cup ROUND of 16</h2>
+                        <h2>WORLD CUP QATAR 2022</h2>
+                        <h3>Round of 16</h3>
                     </div>
                 </div>
                 {alertState && 

@@ -5,13 +5,16 @@ import { Provider } from 'react-redux';
 import App from './App';
 import reducers from './reducers';
 import thunk from 'redux-thunk';
+import {HelmetProvider} from "react-helmet-async"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const store = configureStore({middleware:[thunk], reducer:reducers})
 root.render(
 
     <Provider store={store}>
-        <App />
+        <HelmetProvider>
+             <App />
+        </HelmetProvider>
     </Provider>
  
 );

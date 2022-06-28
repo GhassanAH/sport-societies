@@ -5,6 +5,7 @@ import fifa from "../img/fifa-qatar-2022-logo.png";
 import * as htmlToImage from 'html-to-image';
 import worldCup from "../img/worldCup2.jpeg"
 import { useNavigate } from "react-router-dom";
+import { Helmet } from 'react-helmet-async';
 
 
 
@@ -74,284 +75,292 @@ const Summary = ({data, data2, data3, data4,data5,data6}) => {
         
     }
     return (
-        <div className="mainContainerSummary">
-            <div ref={ref} className="main-wrapper">
-                <div className="container-info-Summary">
-                    <img src={fifa} alt="fifa world cup logo" className="world-cup-logo-Summary"></img>
-                    <div className="container-info-heading-Summary">
-                        <h1>WORLD CUP QATAR 2022</h1>
-                        <h2>World Cup Summary</h2>
-                        
+        <>       
+             <Helmet>
+                    <title>World Cup Qatar 2022 | Predictions Summary</title>
+                    <meta name="description" content="World Cup Qatar 2022 Prediction"/>
+                    <meta name="keywords" content="Round of 16, Quarterfinal, Semifinals, Groups stage, World cup Qatar 2022, prediction"/>
+                    <link rel="canonical" href="/summary"/>
+             </Helmet>
+            <div className="mainContainerSummary">
+                <div ref={ref} className="main-wrapper">
+                    <div className="container-info-Summary">
+                        <img src={fifa} alt="fifa world cup logo" className="world-cup-logo-Summary"></img>
+                        <div className="container-info-heading-Summary">
+                            <h2>WORLD CUP QATAR 2022</h2>
+                            <h3>Prediction Summary</h3>
+                            
+                        </div>
+                    </div>
+                    <div className="summary-container">
+                            <div className="gridContainerSummary">
+                                    {Object.entries(data).map(([columnId, column], index) =>{
+                                        if(column.name === "Group A" || column.name === "Group B" || column.name === "Group C" || column.name === "Group D"){
+                                            return(
+                                                <div
+                                                className="mainItemSummary"
+                                                key={columnId}
+                                                >
+                                                    <h3>{column.name}</h3>
+                                                    <div>
+                                                        {column.items.sort((a,b) => a.position - b.position).map((item, index) => {
+                                                        
+                                                            
+                                                                    return( 
+                                                                        <div className="column-selector-Summary">
+                                                                            <span className="positionSummary">{item.position}</span>  
+                                                                            <img src={item.imgUrl} alt={item.content} className="flag-img-Summary"></img>
+                                                                            <span className="contentSummary">{item.content}</span>    
+                                                                        </div>
+                                                                    )
+                                                                
+                                                            
+                                                            
+                                                        })}
+                                                    </div>
+        
+                                                </div>
+                                            )
+                                        }
+                                        else{
+                                            return <></>
+                                        }
+                            
+                                    
+                                    })}
+                        </div>
+                        <div className="gridContainerSummary">
+                                    {Object.entries(data).map(([columnId, column], index) =>{
+                                        if(column.name === "Group E" || column.name === "Group F" || column.name === "Group G" || column.name === "Group H"){
+                                            return(
+                                                <div
+                                                className="mainItemSummary"
+                                                key={columnId}
+                                                >
+                                                    <h3>{column.name}</h3>
+                                                    <div>
+                                                        {column.items.sort((a,b) => a.position - b.position).map((item, index) => {
+                                                        
+                                                            
+                                                                    return( 
+                                                                        <div className="column-selector-Summary">
+                                                                            <span className="positionSummary">{item.position}</span>  
+                                                                            <img src={item.imgUrl} alt={item.content} className="flag-img-Summary"></img>
+                                                                            <span className="contentSummary">{item.content}</span>    
+                                                                        </div>
+                                                                    )
+                                                                
+                                                            
+                                                            
+                                                        })}
+                                                    </div>
+        
+                                                </div>
+                                            )
+                                        }
+                                        else{
+                                            return <></>
+                                        }
+                            
+                                    
+                                    })}
+                        </div>
+                        <div className="roundContainer">
+                                <div className="grid2ContainerSummary">
+                                        <div className="main2ItemSummary">
+                                            {round164 && Object.entries(round164).map(([columnId, column], index) =>{
+                                                return(
+                                                    <div
+                                                    key={columnId}
+                                                    className="box"
+                                                    >
+                                                        <h3>Round of 16 {column.name}</h3>
+                                                        <div>
+                                                            {column.items.map((item, index) => {
+                                                                return(
+                                                                    <div className="column-selector-Summary">
+                                                                        <span className="positionSummary">{item.position}</span>  
+                                                                        <img src={item.imgUrl} alt={item.content} className="flag-img-Summary"></img>
+                                                                        <span className="contentSummary">{item.content}</span>    
+                                                                    </div>
+                                                                )
+                                                            })}
+                                                        </div>
+
+                                                    </div>
+                                                )
+                                            })}
+                                        </div>
+                                        <div className="main2ItemSummary">
+                                            {round82 && Object.entries(round82).map(([columnId, column], index) =>{
+                                                return(
+                                                    <div
+                                                    key={columnId}
+                                                    className="box"
+                                                    >
+                                                        <h3>{column.name.replace("Game", "Quarterfinal")}</h3>
+                                                        <div>
+                                                            {column.items.map((item, index) => {
+                                                                return(
+                                                                    <div className="column-selector-Summary">
+                                                                        <img src={item.imgUrl} alt={item.content} className="flag-img-Summary"></img>
+                                                                        <span className="contentSummary">{item.content}</span>    
+                                                                    </div>
+                                                                )
+                                                            })}
+                                                        </div>
+
+                                                    </div>
+                                                )
+                                            })}
+                                        </div>
+                                        <div className="main2ItemSummary">
+                                            {round41 && Object.entries(round41).map(([columnId, column], index) =>{
+                                                return(
+                                                    <div
+                                                    key={columnId}
+                                                    className="box"
+                                                    >
+                                                        <h3>{column.name.replace("Game","Semifinal")}</h3>
+                                                        <div>
+                                                            {column.items.map((item, index) => {
+                                                                return(
+                                                                    <div className="column-selector-Summary">
+                                                                        <img src={item.imgUrl} alt={item.content} className="flag-img-Summary"></img>
+                                                                        <span className="contentSummary">{item.content}</span>    
+                                                                    </div>
+                                                                )
+                                                            })}
+                                                        </div>
+
+                                                    </div>
+                                                )
+                                            })}
+                                        </div>
+                                        <div className="main2ItemSummary">
+                                            {roundf1 && Object.entries(roundf1).map(([columnId, column], index) =>{
+                                                if(column.name === "World Cup Winner"){
+                                                    return(
+                                                        <div
+                                                        key={columnId}
+                                                        className="box"
+                                                        style={{width:"auto"}}
+                                                        >
+                                                            <h3>{column.name}</h3>
+                                                            <div>
+                                                                {column.items.map((item, index) => {
+                                                                    return(
+                                                                        <div className="column-selector-Summary">
+                                                                            <img src={worldCup} alt="worldCup" className="world-img-Summary"></img>
+                                                                            <img src={item.imgUrl} alt={item.content} className="flag-img-Summary"></img>
+                                                                            <span className="contentSummary">{item.content}</span>    
+                                                                        </div>
+                                                                    )
+                                                                })}
+                                                            </div>
+        
+                                                        </div>
+                                                    )
+                                                }else{
+                                                    return(
+                                                        <div
+                                                        key={columnId}
+                                                        className="box"
+                                                        >
+                                                            <h3>{column.name}</h3>
+                                                            <div>
+                                                                {column.items.map((item, index) => {
+                                                                    return(
+                                                                        <div className="column-selector-Summary">
+                                                                            <img src={item.imgUrl} alt={item.content} className="flag-img-Summary"></img>
+                                                                            <span className="contentSummary">{item.content}</span>    
+                                                                        </div>
+                                                                    )
+                                                                })}
+                                                            </div>
+        
+                                                        </div>
+                                                    )
+                                                }
+                                            })}
+                                        </div>
+                                        <div className="main2ItemSummary">
+                                            {round42 && Object.entries(round42).map(([columnId, column], index) =>{
+                                                return(
+                                                    <div
+                                                    key={columnId}
+                                                    className="box"
+                                                    >
+                                                        <h3>{column.name.replace("Game","Semifinal")}</h3>
+                                                        <div>
+                                                            {column.items.map((item, index) => {
+                                                                return(
+                                                                    <div className="column-selector-Summary">
+                                                                        <img src={item.imgUrl} alt={item.content} className="flag-img-Summary"></img>
+                                                                        <span className="contentSummary">{item.content}</span>    
+                                                                    </div>
+                                                                )
+                                                            })}
+                                                        </div>
+
+                                                    </div>
+                                                )
+                                            })}
+                                        </div>
+                                        <div className="main2ItemSummary">
+                                            {round84 && Object.entries(round84).map(([columnId, column], index) =>{
+                                                return(
+                                                    <div
+                                                    key={columnId}
+                                                    className="box"
+                                                    >
+                                                        <h3>{column.name.replace("Game", "Quarterfinal")}</h3>
+                                                        <div>
+                                                            {column.items.map((item, index) => {
+                                                                return(
+                                                                    <div className="column-selector-Summary">
+                                                                        <img src={item.imgUrl} alt={item.content} className="flag-img-Summary"></img>
+                                                                        <span className="contentSummary">{item.content}</span>    
+                                                                    </div>
+                                                                )
+                                                            })}
+                                                        </div>
+
+                                                    </div>
+                                                )
+                                            })}
+                                        </div>
+                                        <div className="main2ItemSummary">
+                                            {round168 && Object.entries(round168).map(([columnId, column], index) =>{
+                                                return(
+                                                    <div
+                                                    key={columnId}
+                                                    className="box"
+                                                    >
+                                                        <h3>Round of 16 {column.name}</h3>
+                                                        <div>
+                                                            {column.items.map((item, index) => {
+                                                                return(
+                                                                    <div className="column-selector-Summary">
+                                                                        <span className="positionSummary">{item.position}</span>
+                                                                        <img src={item.imgUrl} alt={item.content} className="flag-img-Summary"></img>
+                                                                        <span className="contentSummary">{item.content}</span>    
+                                                                    </div>
+                                                                )
+                                                            })}
+                                                        </div>
+
+                                                    </div>
+                                                )
+                                            })}
+                                        </div>
+                                    </div>
+                        </div>
                     </div>
                 </div>
-                <div className="summary-container">
-                        <div className="gridContainerSummary">
-                                {Object.entries(data).map(([columnId, column], index) =>{
-                                     if(column.name === "Group A" || column.name === "Group B" || column.name === "Group C" || column.name === "Group D"){
-                                        return(
-                                            <div
-                                            className="mainItemSummary"
-                                            key={columnId}
-                                            >
-                                                <h3>{column.name}</h3>
-                                                <div>
-                                                    {column.items.sort((a,b) => a.position - b.position).map((item, index) => {
-                                                       
-                                                           
-                                                                return( 
-                                                                    <div className="column-selector-Summary">
-                                                                        <span className="positionSummary">{item.position}</span>  
-                                                                        <img src={item.imgUrl} alt={item.content} className="flag-img-Summary"></img>
-                                                                        <span className="contentSummary">{item.content}</span>    
-                                                                    </div>
-                                                                )
-                                                            
-                                                          
-                                                        
-                                                    })}
-                                                </div>
-    
-                                            </div>
-                                        )
-                                     }
-                                     else{
-                                        return <></>
-                                    }
-                        
-                                   
-                                })}
-                       </div>
-                       <div className="gridContainerSummary">
-                                {Object.entries(data).map(([columnId, column], index) =>{
-                                     if(column.name === "Group E" || column.name === "Group F" || column.name === "Group G" || column.name === "Group H"){
-                                        return(
-                                            <div
-                                            className="mainItemSummary"
-                                            key={columnId}
-                                            >
-                                                <h3>{column.name}</h3>
-                                                <div>
-                                                    {column.items.sort((a,b) => a.position - b.position).map((item, index) => {
-                                                       
-                                                           
-                                                                return( 
-                                                                    <div className="column-selector-Summary">
-                                                                        <span className="positionSummary">{item.position}</span>  
-                                                                        <img src={item.imgUrl} alt={item.content} className="flag-img-Summary"></img>
-                                                                        <span className="contentSummary">{item.content}</span>    
-                                                                    </div>
-                                                                )
-                                                            
-                                                          
-                                                        
-                                                    })}
-                                                </div>
-    
-                                            </div>
-                                        )
-                                     }
-                                     else{
-                                        return <></>
-                                    }
-                        
-                                   
-                                })}
-                       </div>
-                       <div className="roundContainer">
-                            <div className="grid2ContainerSummary">
-                                    <div className="main2ItemSummary">
-                                        {round164 && Object.entries(round164).map(([columnId, column], index) =>{
-                                            return(
-                                                <div
-                                                key={columnId}
-                                                className="box"
-                                                >
-                                                    <h3>Round of 16 {column.name}</h3>
-                                                    <div>
-                                                        {column.items.map((item, index) => {
-                                                            return(
-                                                                <div className="column-selector-Summary">
-                                                                    <span className="positionSummary">{item.position}</span>  
-                                                                    <img src={item.imgUrl} alt={item.content} className="flag-img-Summary"></img>
-                                                                    <span className="contentSummary">{item.content}</span>    
-                                                                </div>
-                                                            )
-                                                        })}
-                                                    </div>
-
-                                                </div>
-                                            )
-                                        })}
-                                    </div>
-                                    <div className="main2ItemSummary">
-                                        {round82 && Object.entries(round82).map(([columnId, column], index) =>{
-                                            return(
-                                                <div
-                                                key={columnId}
-                                                className="box"
-                                                >
-                                                    <h3>{column.name.replace("Game", "Quarterfinal")}</h3>
-                                                    <div>
-                                                        {column.items.map((item, index) => {
-                                                            return(
-                                                                <div className="column-selector-Summary">
-                                                                    <img src={item.imgUrl} alt={item.content} className="flag-img-Summary"></img>
-                                                                    <span className="contentSummary">{item.content}</span>    
-                                                                </div>
-                                                            )
-                                                        })}
-                                                    </div>
-
-                                                </div>
-                                            )
-                                        })}
-                                    </div>
-                                    <div className="main2ItemSummary">
-                                        {round41 && Object.entries(round41).map(([columnId, column], index) =>{
-                                            return(
-                                                <div
-                                                key={columnId}
-                                                className="box"
-                                                >
-                                                    <h3>{column.name.replace("Game","Semifinal")}</h3>
-                                                    <div>
-                                                        {column.items.map((item, index) => {
-                                                            return(
-                                                                <div className="column-selector-Summary">
-                                                                    <img src={item.imgUrl} alt={item.content} className="flag-img-Summary"></img>
-                                                                    <span className="contentSummary">{item.content}</span>    
-                                                                </div>
-                                                            )
-                                                        })}
-                                                    </div>
-
-                                                </div>
-                                            )
-                                        })}
-                                    </div>
-                                    <div className="main2ItemSummary">
-                                        {roundf1 && Object.entries(roundf1).map(([columnId, column], index) =>{
-                                            if(column.name === "World Cup Winner"){
-                                                return(
-                                                    <div
-                                                    key={columnId}
-                                                    className="box"
-                                                    style={{width:"auto"}}
-                                                    >
-                                                        <h3>{column.name}</h3>
-                                                        <div>
-                                                            {column.items.map((item, index) => {
-                                                                return(
-                                                                    <div className="column-selector-Summary">
-                                                                        <img src={worldCup} alt="worldCup" className="world-img-Summary"></img>
-                                                                        <img src={item.imgUrl} alt={item.content} className="flag-img-Summary"></img>
-                                                                        <span className="contentSummary">{item.content}</span>    
-                                                                    </div>
-                                                                )
-                                                            })}
-                                                        </div>
-    
-                                                    </div>
-                                                )
-                                            }else{
-                                                return(
-                                                    <div
-                                                    key={columnId}
-                                                    className="box"
-                                                    >
-                                                        <h3>{column.name}</h3>
-                                                        <div>
-                                                            {column.items.map((item, index) => {
-                                                                return(
-                                                                    <div className="column-selector-Summary">
-                                                                        <img src={item.imgUrl} alt={item.content} className="flag-img-Summary"></img>
-                                                                        <span className="contentSummary">{item.content}</span>    
-                                                                    </div>
-                                                                )
-                                                            })}
-                                                        </div>
-    
-                                                    </div>
-                                                )
-                                            }
-                                        })}
-                                    </div>
-                                    <div className="main2ItemSummary">
-                                        {round42 && Object.entries(round42).map(([columnId, column], index) =>{
-                                            return(
-                                                <div
-                                                key={columnId}
-                                                className="box"
-                                                >
-                                                    <h3>{column.name.replace("Game","Semifinal")}</h3>
-                                                    <div>
-                                                        {column.items.map((item, index) => {
-                                                            return(
-                                                                <div className="column-selector-Summary">
-                                                                    <img src={item.imgUrl} alt={item.content} className="flag-img-Summary"></img>
-                                                                    <span className="contentSummary">{item.content}</span>    
-                                                                </div>
-                                                            )
-                                                        })}
-                                                    </div>
-
-                                                </div>
-                                            )
-                                        })}
-                                    </div>
-                                    <div className="main2ItemSummary">
-                                        {round84 && Object.entries(round84).map(([columnId, column], index) =>{
-                                            return(
-                                                <div
-                                                key={columnId}
-                                                className="box"
-                                                >
-                                                    <h3>{column.name.replace("Game", "Quarterfinal")}</h3>
-                                                    <div>
-                                                        {column.items.map((item, index) => {
-                                                            return(
-                                                                <div className="column-selector-Summary">
-                                                                    <img src={item.imgUrl} alt={item.content} className="flag-img-Summary"></img>
-                                                                    <span className="contentSummary">{item.content}</span>    
-                                                                </div>
-                                                            )
-                                                        })}
-                                                    </div>
-
-                                                </div>
-                                            )
-                                        })}
-                                    </div>
-                                    <div className="main2ItemSummary">
-                                        {round168 && Object.entries(round168).map(([columnId, column], index) =>{
-                                            return(
-                                                <div
-                                                key={columnId}
-                                                className="box"
-                                                >
-                                                    <h3>Round of 16 {column.name}</h3>
-                                                    <div>
-                                                        {column.items.map((item, index) => {
-                                                            return(
-                                                                <div className="column-selector-Summary">
-                                                                    <span className="positionSummary">{item.position}</span>
-                                                                    <img src={item.imgUrl} alt={item.content} className="flag-img-Summary"></img>
-                                                                    <span className="contentSummary">{item.content}</span>    
-                                                                </div>
-                                                            )
-                                                        })}
-                                                    </div>
-
-                                                </div>
-                                            )
-                                        })}
-                                    </div>
-                                </div>
-                       </div>
-                   </div>
+                <button className="container-btn-Summary" onClick={onDownload}>Download Your Prediction</button>
             </div>
-            <button className="container-btn-Summary" onClick={onDownload}>Download Your Prediction</button>
-        </div>
+        </>
         
     )
 }

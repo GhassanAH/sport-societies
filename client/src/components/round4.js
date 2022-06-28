@@ -6,6 +6,7 @@ import { connect } from 'react-redux'
 import {final} from '../actions'
 import finald from '../data/finald'
 import { useNavigate } from "react-router-dom";
+import { Helmet } from 'react-helmet-async';
 
 
 
@@ -89,12 +90,18 @@ const Round4 = ({data4, onSaveFinal}) => {
 
     return(
         <>
+        <Helmet>
+                <title>World Cup Qatar 2022 | Semifinal Predictions</title>
+                <meta name="description" content="Pick the semifinal qualifiers in the World Cup Qatar 2022"/>
+                <meta name="keywords" content="semifinals, semifinal, World cup Qatar 2022, semifinals stage, prediction"/>
+                <link rel="canonical" href="/round4"/>
+        </Helmet>
         { round4Data &&  <div className="mainContainerRound16">
             <div className="container-info-round16">
                 <img src={fifa} alt="fifa world cup logo" className="world-cup-logo-round16"></img>
                 <div className="container-info-heading-round16">
-                    <h1>WORLD CUP QATAR 2022</h1>
-                    <h2>World Cup Semifinals</h2>
+                    <h2>WORLD CUP QATAR 2022</h2>
+                    <h3>Semifinals</h3>
                 </div>
             </div>
             {alertState && 
