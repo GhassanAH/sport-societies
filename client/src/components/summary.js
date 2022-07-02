@@ -23,6 +23,7 @@ const Summary = ({data, data2, data3, data4,data5,data6}) => {
     let navigate = useNavigate();
 
 
+
     useEffect(() => {
         setRound164([
             data2["Game 1 16"],
@@ -71,6 +72,12 @@ const Summary = ({data, data2, data3, data4,data5,data6}) => {
                         link.click();
                         navigate("/",{ replace: true })
                     });
+        window.localStorage.removeItem("groups")
+        window.localStorage.removeItem("round16")
+        window.localStorage.removeItem("round4")
+        window.localStorage.removeItem("round8")
+        window.localStorage.removeItem("final")
+        window.localStorage.removeItem("winner")
       
         
     }
@@ -107,7 +114,7 @@ const Summary = ({data, data2, data3, data4,data5,data6}) => {
                                                         
                                                             
                                                                     return( 
-                                                                        <div className="column-selector-Summary">
+                                                                        <div className="column-selector-Summary" key={index*10-11}>
                                                                             <span className="positionSummary">{item.position}</span>  
                                                                             <img src={item.imgUrl} alt={item.content} className="flag-img-Summary"></img>
                                                                             <span className="contentSummary">{item.content}</span>    
@@ -143,7 +150,7 @@ const Summary = ({data, data2, data3, data4,data5,data6}) => {
                                                         
                                                             
                                                                     return( 
-                                                                        <div className="column-selector-Summary">
+                                                                        <div className="column-selector-Summary" key={index*10-10}>
                                                                             <span className="positionSummary">{item.position}</span>  
                                                                             <img src={item.imgUrl} alt={item.content} className="flag-img-Summary"></img>
                                                                             <span className="contentSummary">{item.content}</span>    
@@ -178,7 +185,7 @@ const Summary = ({data, data2, data3, data4,data5,data6}) => {
                                                         <div>
                                                             {column.items.map((item, index) => {
                                                                 return(
-                                                                    <div className="column-selector-Summary">
+                                                                    <div className="column-selector-Summary" key={index*10-9}>
                                                                         <span className="positionSummary">{item.position}</span>  
                                                                         <img src={item.imgUrl} alt={item.content} className="flag-img-Summary"></img>
                                                                         <span className="contentSummary">{item.content}</span>    
@@ -202,7 +209,7 @@ const Summary = ({data, data2, data3, data4,data5,data6}) => {
                                                         <div>
                                                             {column.items.map((item, index) => {
                                                                 return(
-                                                                    <div className="column-selector-Summary">
+                                                                    <div className="column-selector-Summary" key={index*10-8}>
                                                                         <img src={item.imgUrl} alt={item.content} className="flag-img-Summary"></img>
                                                                         <span className="contentSummary">{item.content}</span>    
                                                                     </div>
@@ -225,7 +232,7 @@ const Summary = ({data, data2, data3, data4,data5,data6}) => {
                                                         <div>
                                                             {column.items.map((item, index) => {
                                                                 return(
-                                                                    <div className="column-selector-Summary">
+                                                                    <div className="column-selector-Summary" key={index*10-6}>
                                                                         <img src={item.imgUrl} alt={item.content} className="flag-img-Summary"></img>
                                                                         <span className="contentSummary">{item.content}</span>    
                                                                     </div>
@@ -250,7 +257,7 @@ const Summary = ({data, data2, data3, data4,data5,data6}) => {
                                                             <div>
                                                                 {column.items.map((item, index) => {
                                                                     return(
-                                                                        <div className="column-selector-Summary">
+                                                                        <div className="column-selector-Summary" key={index*10-5}>
                                                                             <img src={worldCup} alt="worldCup" className="world-img-Summary"></img>
                                                                             <img src={item.imgUrl} alt={item.content} className="flag-img-Summary"></img>
                                                                             <span className="contentSummary">{item.content}</span>    
@@ -271,7 +278,7 @@ const Summary = ({data, data2, data3, data4,data5,data6}) => {
                                                             <div>
                                                                 {column.items.map((item, index) => {
                                                                     return(
-                                                                        <div className="column-selector-Summary">
+                                                                        <div className="column-selector-Summary" key={index*10-4}>
                                                                             <img src={item.imgUrl} alt={item.content} className="flag-img-Summary"></img>
                                                                             <span className="contentSummary">{item.content}</span>    
                                                                         </div>
@@ -295,7 +302,7 @@ const Summary = ({data, data2, data3, data4,data5,data6}) => {
                                                         <div>
                                                             {column.items.map((item, index) => {
                                                                 return(
-                                                                    <div className="column-selector-Summary">
+                                                                    <div className="column-selector-Summary" key={index*10-3}>
                                                                         <img src={item.imgUrl} alt={item.content} className="flag-img-Summary"></img>
                                                                         <span className="contentSummary">{item.content}</span>    
                                                                     </div>
@@ -318,7 +325,7 @@ const Summary = ({data, data2, data3, data4,data5,data6}) => {
                                                         <div>
                                                             {column.items.map((item, index) => {
                                                                 return(
-                                                                    <div className="column-selector-Summary">
+                                                                    <div className="column-selector-Summary" key={index*10-2}>
                                                                         <img src={item.imgUrl} alt={item.content} className="flag-img-Summary"></img>
                                                                         <span className="contentSummary">{item.content}</span>    
                                                                     </div>
@@ -341,7 +348,7 @@ const Summary = ({data, data2, data3, data4,data5,data6}) => {
                                                         <div>
                                                             {column.items.map((item, index) => {
                                                                 return(
-                                                                    <div className="column-selector-Summary">
+                                                                    <div className="column-selector-Summary" key={index*10-1}>
                                                                         <span className="positionSummary">{item.position}</span>
                                                                         <img src={item.imgUrl} alt={item.content} className="flag-img-Summary"></img>
                                                                         <span className="contentSummary">{item.content}</span>    

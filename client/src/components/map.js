@@ -1,9 +1,9 @@
-import React,{useState} from 'react';
+import React,{useState, useEffect,} from 'react';
 import {DragDropContext, Draggable, Droppable} from "react-beautiful-dnd"
 import '../css/groupStage.css'
 import  data  from '../data/columns';
 import fifa from "../img/fifa-qatar-2022-logo.png";
-import { useNavigate } from "react-router-dom";
+import { useNavigate,  } from "react-router-dom";
 import { connect } from 'react-redux'
 import {saveGrops, save16} from '../actions'
 import round16 from '../data/round16'
@@ -14,9 +14,17 @@ import { Helmet } from 'react-helmet-async';
 
 
 const WorldMap = ({onSaveGroups, onSave16}) => {
-
     const [DataColumns, setColumns] = useState(data)
     let navigate = useNavigate();
+    
+
+    useEffect(() => {
+        
+        window.onpopstate = () => {
+            const data = JSON.parse(localStorage.getItem("groups"));
+            setColumns(data)
+        }
+    }, [])
 
     const onDragEnd = (result) => {
         if (!result.destination) return;
@@ -117,7 +125,7 @@ const WorldMap = ({onSaveGroups, onSave16}) => {
                                             minHeight: 200
                                         }}
                                         >
-                                        {column.items.map((item, index) => {
+                                        {column.items.sort((a,b) => a.position - b.position).map((item, index) => {
                                             return (
                                             <Draggable
                                                 key={item.id}

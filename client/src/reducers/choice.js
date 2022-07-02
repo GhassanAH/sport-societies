@@ -1,6 +1,9 @@
 import { SAVE_GROUPS } from "../actions/types"
+import data from "../data/columns"
 
-const choice = (state = JSON.parse(localStorage.getItem("groups")), action) => {
+
+
+const choice = (state = data, action) => {
     switch(action.type){
         case SAVE_GROUPS:
             return action.payload || false
