@@ -20,6 +20,7 @@ const WorldMap = ({onSaveGroups, onSave16}) => {
 
     useEffect(() => {
         
+        
         window.onpopstate = () => {
             const data = JSON.parse(localStorage.getItem("groups"));
             setColumns(data)
