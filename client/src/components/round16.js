@@ -153,9 +153,7 @@ const Round16 = ({data2, onSave8}) => {
                                                         ...provided.draggableProps.style
                                                     }}
                                                     className="column-selector-round16"
-                                                    >
-
-                                                    <span className="positionRound16">{item.position}</span>  
+                                                    >  
                                                     <img src={item.imgUrl} alt={item.content} className="flag-img-round16"></img>
                                                     <span className="contentRound16">{item.content}</span>    
                                                    

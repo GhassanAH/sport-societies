@@ -18,13 +18,13 @@ w_q3, w_q4,
         name:"Winner of Game 1",
         items:[]
     },
-    [id3]:{
-        name:"Game 2",
-        items:[w_q3, w_q4,]
-    },
     [id4]:{
         name:"Winner of Game 2",
         items:[]
+    },
+    [id3]:{
+        name:"Game 2",
+        items:[w_q3, w_q4,]
     },
    
 }

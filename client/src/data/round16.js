@@ -34,13 +34,13 @@ firstH, secondH
         name:"Winner of Game 1",
         items:[]
     },
-    [id5]:{
-        name:"Game 2",
-        items:[firstC, secondD,]
-    },
     [id6]:{
         name:"winner of Game 2",
         items:[]
+    },
+    [id5]:{
+        name:"Game 2",
+        items:[firstC, secondD,]
     },
     [id7]:{
         name:"Game 3",
@@ -50,14 +50,14 @@ firstH, secondH
         name:"Winner of Game 3",
         items:[]
     },
-    [id3]:{
-        name:"Game 4",
-        items:[firstB, secondA,]
-    },
     [id4]:{
         name:"Winner of Game 4",
         items:[]
     },    
+    [id3]:{
+        name:"Game 4",
+        items:[firstB, secondA,]
+    },
     [id9]:{
         name:"Game 5",
         items:[firstE, secondF,]
@@ -66,14 +66,14 @@ firstH, secondH
         name:"Winner of Game 5",
         items:[]
     },
-    [id13]:{
-        name:"Game 6",
-        items:[firstG, secondH,]
-    },
     [id14]:{
         name:"Winner of Game 6",
         items:[]
     },   
+    [id13]:{
+        name:"Game 6",
+        items:[firstG, secondH,]
+    },
     [id11]:{
         name:"Game 7",
         items:[firstF, secondE,]
@@ -82,14 +82,14 @@ firstH, secondH
         name:"Winner of Game 7",
         items:[]
     },   
-    [id15]:{
-        name:"Game 8",
-        items:[firstH, secondG]
-    },
     [id16]:{
         name:"Winner of Game 8",
         items:[]
     },  
+    [id15]:{
+        name:"Game 8",
+        items:[firstH, secondG]
+    },
 }
 }
 export default round16;

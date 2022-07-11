@@ -1,50 +1,82 @@
 import { v4 as uuidv4 } from 'uuid';
+import Qatar from '../img/qa-flag.gif'
+import Ecuador from '../img/ec-flag.gif'
+import Senegal from '../img/sg-flag.gif'
+import Netherlands from '../img/nl-flag.webp'
+import England from '../img/UNKG0100.png'
+import Iran from '../img/ir-flag.gif'
+import USA from '../img/us-flag.webp'
+import Wales from '../img/Flag-Wales.webp'
+import Argentina from '../img/ar-flag.gif'
+import Saudi from '../img/sa-flag.webp'
+import Mexico from '../img/mx-flag.webp'
+import Poland from '../img/pl-flag.gif'
+import France from '../img/fr-flag.webp'
+import Australia from '../img/as-flag.webp'
+import Denmark from '../img/da-flag.gif'
+import Tunisia from '../img/ts-flag.gif'
+import Spain from '../img/sp-flag.webp'
+import Costa from '../img/cs-flag.gif'
+import Germany from '../img/gm-flag.webp'
+import Japan from '../img/ja-flag.webp'
+import Belgium from '../img/be-flag.gif'
+import Canada from '../img/ca-flag.webp'
+import Morocco from '../img/mo-flag.gif'
+import Croatia from '../img/hr-flag.gif'
+import Brazil from '../img/br-flag.gif'
+import Serbia from '../img/sa-flag.webp'
+import Switzerland from '../img/sz-flag.webp'
+import Cameroon from '../img/cm-flag.gif'
+import Portugal from '../img/po-flag.gif'
+import Ghana from '../img/gh-flag.gif'
+import Uruguay from '../img/uy-flag.gif'
+import South from '../img/ks-flag.webp'
 const data = {
     [uuidv4()]:{
         name:"Group A",
         items:[
-            { id: uuidv4(), position:1, content: "Qatar ", imgUrl:"https://ssl.gstatic.com/onebox/media/sports/logos/h0FNA5YxLzWChHS5K0o4gw_48x48.png" },
-            { id: uuidv4(), position:2, content: "Ecuador " ,imgUrl:"https://ssl.gstatic.com/onebox/media/sports/logos/AKqvkBpIyr-iLOK7Ig7-yQ_48x48.png"},
-            { id: uuidv4(), position:3, content: "Senegal " ,imgUrl:"https://ssl.gstatic.com/onebox/media/sports/logos/zw3ac5sIbH4DS6zP5auOkQ_48x48.png"},
-            { id: uuidv4(), position:4, content: "Netherlands " ,imgUrl:"https://ssl.gstatic.com/onebox/media/sports/logos/8GEqzfLegwFFpe6X2BODTg_48x48.png"},
+            { id: uuidv4(), position:1, content: "Qatar ", imgUrl:Qatar },
+            { id: uuidv4(), position:2, content: "Ecuador " ,imgUrl:Ecuador},
+            { id: uuidv4(), position:3, content: "Senegal " ,imgUrl:Senegal},
+            { id: uuidv4(), position:4, content: "Netherlands " ,imgUrl:Netherlands},
            
         ]
     },
     [uuidv4()]:{
         name:"Group B",
         items:[
-            { id: uuidv4(), position:1, content: "England " ,imgUrl:"https://ssl.gstatic.com/onebox/media/sports/logos/DTqIL8Ba3KIuxGkpXw5ayA_48x48.png"},
-            { id: uuidv4(), position:2, content: "Iran " ,imgUrl:"https://ssl.gstatic.com/onebox/media/sports/logos/1oq8Fy7ETpBpZNaCA22ArQ_48x48.png"},
-            { id: uuidv4(), position:3, content: "USA " ,imgUrl:"https://ssl.gstatic.com/onebox/media/sports/logos/wj9uZvn_vZrelLFGH8fnPA_48x48.png"},
-            { id: uuidv4(), position:4, content: "Wales " ,imgUrl:"https://ssl.gstatic.com/onebox/media/sports/logos/1JjnDm6Es30LryHzbudyEw_48x48.png"},
+            { id: uuidv4(), position:1, content: "England " ,imgUrl:England},
+            { id: uuidv4(), position:2, content: "Iran " ,imgUrl:Iran},
+            { id: uuidv4(), position:3, content: "USA " ,imgUrl:USA},
+            { id: uuidv4(), position:4, content: "Wales " ,imgUrl:Wales},
         ]
     },
     [uuidv4()]:{
         name:"Group C",
         items:[
-            { id: uuidv4(), position:1, content: "Argentina " ,imgUrl:"https://ssl.gstatic.com/onebox/media/sports/logos/1xBWyjjkA6vEWopPK3lIPA_48x48.png"},
-            { id: uuidv4(), position:2, content: "Saudi Arabia " ,imgUrl:"https://ssl.gstatic.com/onebox/media/sports/logos/QoAJxO46fHid3_T-7nRZ0Q_48x48.png"},
-            { id: uuidv4(), position:3, content: "Mexico " ,imgUrl:"https://ssl.gstatic.com/onebox/media/sports/logos/yJF9xqmUGenD8108FJbg9A_48x48.png"},
-            { id: uuidv4(), position:4, content: "Poland " ,imgUrl:"https://ssl.gstatic.com/onebox/media/sports/logos/yTS_Piy3M1wUBnqU0n5aAw_48x48.png"},
+            { id: uuidv4(), position:1, content: "Argentina " ,imgUrl:Argentina},
+            { id: uuidv4(), position:2, content: "Saudi Arabia " ,imgUrl:Saudi},
+            { id: uuidv4(), position:3, content: "Mexico " ,imgUrl:Mexico},
+            { id: uuidv4(), position:4, content: "Poland " ,imgUrl:Poland},
            
         ]
     },
     [uuidv4()]:{
         name:"Group D",
         items:[
-            { id: uuidv4(), position:1, content: "France " ,imgUrl:"https://ssl.gstatic.com/onebox/media/sports/logos/z3JEQB3coEAGLCJBEUzQ2A_48x48.png"},
-            { id: uuidv4(), position:2, content: "Australia " ,imgUrl:"https://ssl.gstatic.com/onebox/media/sports/logos/jSgw5z0EPOLzdUi-Aomq7Q_48x48.png"},
-            { id: uuidv4(), position:3, content: "Denmark " ,imgUrl:"https://ssl.gstatic.com/onebox/media/sports/logos/LaOvu-pyRqRso6uzff55XA_48x48.png"},
-            { id: uuidv4(), position:4, content: "Tunisia " ,imgUrl:"https://ssl.gstatic.com/onebox/media/sports/logos/Xs33c9XVUJBX0IkeFn_bIw_48x48.png"},
+            { id: uuidv4(), position:1, content: "France " ,imgUrl:France},
+            { id: uuidv4(), position:2, content: "Australia " ,imgUrl:Australia},
+            { id: uuidv4(), position:3, content: "Denmark " ,imgUrl:Denmark},
+            { id: uuidv4(), position:4, content: "Tunisia " ,imgUrl:Tunisia},
             
         ]
     },    [uuidv4()]:{
         name:"Group E",
         items:[
-            { id: uuidv4(), position:1, content: "Spain " ,imgUrl:"https://ssl.gstatic.com/onebox/media/sports/logos/5hLkf7KFHhmpaiOJQv8LmA_48x48.png"},
-            { id: uuidv4(), position:2, content: "Costa Rica " ,imgUrl:"https://ssl.gstatic.com/onebox/media/sports/logos/ixZiM5pj2IvvYc15k-zfeQ_48x48.png"},
-            { id: uuidv4(), position:3, content: "Germany " ,imgUrl:"https://ssl.gstatic.com/onebox/media/sports/logos/h1FhPLmDg9AHXzhygqvVPg_48x48.png"},
-            { id: uuidv4(), position:4, content: "Japan " ,imgUrl:"https://ssl.gstatic.com/onebox/media/sports/logos/by4OltvtZz7taxuQtkiP3A_48x48.png"},
+            { id: uuidv4(), position:1, content: "Spain " ,imgUrl:Spain},
+            { id: uuidv4(), position:2, content: "Costa Rica " ,imgUrl:Costa},
+            { id: uuidv4(), position:3, content: "Germany " ,imgUrl:Germany},
+            { id: uuidv4(), position:4, content: "Japan " ,imgUrl:Japan},
            
            
         ]
@@ -52,29 +84,29 @@ const data = {
     [uuidv4()]:{
         name:"Group F",
         items:[
-            { id: uuidv4(), position:1, content: "Belgium " ,imgUrl:"https://ssl.gstatic.com/onebox/media/sports/logos/6SF7yEoB60bU5knw-M7R5Q_48x48.png"},
-            { id: uuidv4(), position:2, content: "Canada " ,imgUrl:"https://ssl.gstatic.com/onebox/media/sports/logos/H23oIEP6qK-zNc3O8abnIA_48x48.png"},
-            { id: uuidv4(), position:3, content: "Morocco " ,imgUrl:"https://ssl.gstatic.com/onebox/media/sports/logos/I3gt2Ew39ux3GGdZ-4JE3g_48x48.png"},
-            { id: uuidv4(), position:4, content: "Croatia " ,imgUrl:"https://ssl.gstatic.com/onebox/media/sports/logos/9toerdOg8xW4CRhDaZxsyw_48x48.png"},
+            { id: uuidv4(), position:1, content: "Belgium " ,imgUrl:Belgium},
+            { id: uuidv4(), position:2, content: "Canada " ,imgUrl:Canada},
+            { id: uuidv4(), position:3, content: "Morocco " ,imgUrl:Morocco},
+            { id: uuidv4(), position:4, content: "Croatia " ,imgUrl:Croatia},
         ]
     },
     [uuidv4()]:{
         name:"Group G",
         items:[
-            { id: uuidv4(), position:1, content: "Brazil " ,imgUrl:"https://ssl.gstatic.com/onebox/media/sports/logos/zKLzoJVYz0bb6oAnPUdwWQ_48x48.png"},
-            { id: uuidv4(), position:2, content: "Serbia " ,imgUrl:"https://ssl.gstatic.com/onebox/media/sports/logos/xyh1vmZ-xJH2iJCKjqS1Ow_48x48.png"},
-            { id: uuidv4(), position:3, content: "Switzerland " ,imgUrl:"https://ssl.gstatic.com/onebox/media/sports/logos/1hy9ek4dOIffYULM6k1fqg_48x48.png"},
-            { id: uuidv4(), position:4, content: "Cameroon " ,imgUrl:"https://ssl.gstatic.com/onebox/media/sports/logos/fmHyTSbJ-cYbY6WJzvqaZQ_48x48.png"},
+            { id: uuidv4(), position:1, content: "Brazil " ,imgUrl:Brazil},
+            { id: uuidv4(), position:2, content: "Serbia " ,imgUrl:Serbia},
+            { id: uuidv4(), position:3, content: "Switzerland " ,imgUrl:Switzerland},
+            { id: uuidv4(), position:4, content: "Cameroon " ,imgUrl:Cameroon},
            
         ]
     },
     [uuidv4()]:{
         name:"Group H",
         items:[
-            { id: uuidv4(), position:1, content: "Portugal " ,imgUrl:"https://ssl.gstatic.com/onebox/media/sports/logos/HJ3_2c4w791nZJj7n-Lj3Q_48x48.png"},
-            { id: uuidv4(), position:2, content: "Ghana " ,imgUrl:"https://ssl.gstatic.com/onebox/media/sports/logos/VJQ1emg0TOubjGnap4vWuw_48x48.png"},
-            { id: uuidv4(), position:3, content: "Uruguay " ,imgUrl:"https://ssl.gstatic.com/onebox/media/sports/logos/KnSUdQWiGRoy89q4x85IgA_48x48.png"},
-            { id: uuidv4(), position:4, content: "South Korea " ,imgUrl:"https://ssl.gstatic.com/onebox/media/sports/logos/Uu5pwNmMHGd5bCooKrS3Lw_48x48.png"},
+            { id: uuidv4(), position:1, content: "Portugal " ,imgUrl:Portugal},
+            { id: uuidv4(), position:2, content: "Ghana " ,imgUrl:Ghana},
+            { id: uuidv4(), position:3, content: "Uruguay " ,imgUrl:Uruguay},
+            { id: uuidv4(), position:4, content: "South Korea " ,imgUrl:South},
         ]
     }
 }

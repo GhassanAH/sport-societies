@@ -6,6 +6,7 @@ import * as htmlToImage from 'html-to-image';
 import worldCup from "../img/worldCup2.jpeg"
 import { useNavigate } from "react-router-dom";
 import { Helmet } from 'react-helmet-async';
+import html2canvas from "html2canvas";
 
 
 
@@ -62,16 +63,26 @@ const Summary = ({data, data2, data3, data4,data5,data6}) => {
 
     },[data2, data3, data4, data5, data6])
 
-    const onDownload = () => {
+    const onDownload = async () => {
         const container = ref.current;
-        htmlToImage.toPng(container, { quality: 0.95 })
-                   .then(function (dataUrl) {
-                        var link = document.createElement('a');
-                        link.download = 'YourWorldCupPrediction.png';
-                        link.href = dataUrl;
-                        link.click();
-                        navigate("/",{ replace: true })
-                    });
+        const canvas = await html2canvas(container);
+        const image = canvas.toDataURL("image/png", 1.0);
+        const fakeLink = window.document.createElement("a");
+        fakeLink.style = "display:none;";
+        fakeLink.download ="YourWorldCupPrediction.png"
+        fakeLink.href = image;
+        document.body.appendChild(fakeLink);
+        fakeLink.click();
+        document.body.removeChild(fakeLink);
+        fakeLink.remove();
+        // htmlToImage.toPng(container, { quality: 0.95 })
+        //            .then(function (dataUrl) {
+        //                 var link = document.createElement('a');
+        //                 link.download = 'YourWorldCupPrediction.png';
+        //                 link.href = dataUrl;
+        //                 link.click();
+        //                 navigate("/",{ replace: true })
+        //             });
         window.localStorage.removeItem("groups")
         window.localStorage.removeItem("round16")
         window.localStorage.removeItem("round4")
@@ -109,13 +120,12 @@ const Summary = ({data, data2, data3, data4,data5,data6}) => {
                                                 key={columnId}
                                                 >
                                                     <h3>{column.name}</h3>
-                                                    <div>
+                                                    <div className="column-wrapper">
                                                         {column.items.sort((a,b) => a.position - b.position).map((item, index) => {
                                                         
                                                             
                                                                     return( 
                                                                         <div className="column-selector-Summary" key={index*10-11}>
-                                                                            <span className="positionSummary">{item.position}</span>  
                                                                             <img src={item.imgUrl} alt={item.content} className="flag-img-Summary"></img>
                                                                             <span className="contentSummary">{item.content}</span>    
                                                                         </div>
@@ -145,13 +155,12 @@ const Summary = ({data, data2, data3, data4,data5,data6}) => {
                                                 key={columnId}
                                                 >
                                                     <h3>{column.name}</h3>
-                                                    <div>
+                                                    <div className="column-wrapper">
                                                         {column.items.sort((a,b) => a.position - b.position).map((item, index) => {
                                                         
                                                             
                                                                     return( 
                                                                         <div className="column-selector-Summary" key={index*10-10}>
-                                                                            <span className="positionSummary">{item.position}</span>  
                                                                             <img src={item.imgUrl} alt={item.content} className="flag-img-Summary"></img>
                                                                             <span className="contentSummary">{item.content}</span>    
                                                                         </div>
@@ -181,14 +190,12 @@ const Summary = ({data, data2, data3, data4,data5,data6}) => {
                                                     key={columnId}
                                                     className="box"
                                                     >
-                                                        <h3>Round of 16 {column.name}</h3>
+                                                        
                                                         <div>
                                                             {column.items.map((item, index) => {
                                                                 return(
-                                                                    <div className="column-selector-Summary" key={index*10-9}>
-                                                                        <span className="positionSummary">{item.position}</span>  
-                                                                        <img src={item.imgUrl} alt={item.content} className="flag-img-Summary"></img>
-                                                                        <span className="contentSummary">{item.content}</span>    
+                                                                    <div className="column-selector-Summary" key={index*10-9}>  
+                                                                        <img src={item.imgUrl} alt={item.content} className="flag-img-Summary"></img>  
                                                                     </div>
                                                                 )
                                                             })}
@@ -204,14 +211,13 @@ const Summary = ({data, data2, data3, data4,data5,data6}) => {
                                                     <div
                                                     key={columnId}
                                                     className="box"
+
                                                     >
-                                                        <h3>{column.name.replace("Game", "Quarterfinal")}</h3>
                                                         <div>
                                                             {column.items.map((item, index) => {
                                                                 return(
-                                                                    <div className="column-selector-Summary" key={index*10-8}>
-                                                                        <img src={item.imgUrl} alt={item.content} className="flag-img-Summary"></img>
-                                                                        <span className="contentSummary">{item.content}</span>    
+                                                                    <div className="column-selector-Summary " key={index*10-8}>
+                                                                        <img src={item.imgUrl} alt={item.content} className="flag-img-Summary"></img>   
                                                                     </div>
                                                                 )
                                                             })}
@@ -228,13 +234,13 @@ const Summary = ({data, data2, data3, data4,data5,data6}) => {
                                                     key={columnId}
                                                     className="box"
                                                     >
-                                                        <h3>{column.name.replace("Game","Semifinal")}</h3>
+                                                        
                                                         <div>
                                                             {column.items.map((item, index) => {
                                                                 return(
                                                                     <div className="column-selector-Summary" key={index*10-6}>
                                                                         <img src={item.imgUrl} alt={item.content} className="flag-img-Summary"></img>
-                                                                        <span className="contentSummary">{item.content}</span>    
+                                                                          
                                                                     </div>
                                                                 )
                                                             })}
@@ -244,23 +250,22 @@ const Summary = ({data, data2, data3, data4,data5,data6}) => {
                                                 )
                                             })}
                                         </div>
-                                        <div className="main2ItemSummary">
+                                        <div className="main2ItemSummary" style={{height:"500px"}}>
                                             {roundf1 && Object.entries(roundf1).map(([columnId, column], index) =>{
                                                 if(column.name === "World Cup Winner"){
                                                     return(
                                                         <div
                                                         key={columnId}
                                                         className="box"
-                                                        style={{width:"auto"}}
+                                                        
                                                         >
-                                                            <h3>{column.name}</h3>
+                                                            
                                                             <div>
                                                                 {column.items.map((item, index) => {
                                                                     return(
-                                                                        <div className="column-selector-Summary" key={index*10-5}>
+                                                                        <div className="column-selector-Summary" style={{flexDirection:"column"}} key={index*10-5}>
                                                                             <img src={worldCup} alt="worldCup" className="world-img-Summary"></img>
-                                                                            <img src={item.imgUrl} alt={item.content} className="flag-img-Summary"></img>
-                                                                            <span className="contentSummary">{item.content}</span>    
+                                                                            <img src={item.imgUrl} alt={item.content} className="flag-img-Summary"></img>  
                                                                         </div>
                                                                     )
                                                                 })}
@@ -274,13 +279,12 @@ const Summary = ({data, data2, data3, data4,data5,data6}) => {
                                                         key={columnId}
                                                         className="box"
                                                         >
-                                                            <h3>{column.name}</h3>
+                                                            
                                                             <div>
                                                                 {column.items.map((item, index) => {
                                                                     return(
                                                                         <div className="column-selector-Summary" key={index*10-4}>
-                                                                            <img src={item.imgUrl} alt={item.content} className="flag-img-Summary"></img>
-                                                                            <span className="contentSummary">{item.content}</span>    
+                                                                            <img src={item.imgUrl} alt={item.content} className="flag-img-Summary"></img>    
                                                                         </div>
                                                                     )
                                                                 })}
@@ -298,13 +302,12 @@ const Summary = ({data, data2, data3, data4,data5,data6}) => {
                                                     key={columnId}
                                                     className="box"
                                                     >
-                                                        <h3>{column.name.replace("Game","Semifinal")}</h3>
+                                                        
                                                         <div>
                                                             {column.items.map((item, index) => {
                                                                 return(
                                                                     <div className="column-selector-Summary" key={index*10-3}>
-                                                                        <img src={item.imgUrl} alt={item.content} className="flag-img-Summary"></img>
-                                                                        <span className="contentSummary">{item.content}</span>    
+                                                                        <img src={item.imgUrl} alt={item.content} className="flag-img-Summary"></img>    
                                                                     </div>
                                                                 )
                                                             })}
@@ -321,13 +324,12 @@ const Summary = ({data, data2, data3, data4,data5,data6}) => {
                                                     key={columnId}
                                                     className="box"
                                                     >
-                                                        <h3>{column.name.replace("Game", "Quarterfinal")}</h3>
+                                                        
                                                         <div>
                                                             {column.items.map((item, index) => {
                                                                 return(
                                                                     <div className="column-selector-Summary" key={index*10-2}>
-                                                                        <img src={item.imgUrl} alt={item.content} className="flag-img-Summary"></img>
-                                                                        <span className="contentSummary">{item.content}</span>    
+                                                                        <img src={item.imgUrl} alt={item.content} className="flag-img-Summary"></img>  
                                                                     </div>
                                                                 )
                                                             })}
@@ -344,14 +346,12 @@ const Summary = ({data, data2, data3, data4,data5,data6}) => {
                                                     key={columnId}
                                                     className="box"
                                                     >
-                                                        <h3>Round of 16 {column.name}</h3>
+                                                        
                                                         <div>
                                                             {column.items.map((item, index) => {
                                                                 return(
                                                                     <div className="column-selector-Summary" key={index*10-1}>
-                                                                        <span className="positionSummary">{item.position}</span>
-                                                                        <img src={item.imgUrl} alt={item.content} className="flag-img-Summary"></img>
-                                                                        <span className="contentSummary">{item.content}</span>    
+                                                                        <img src={item.imgUrl} alt={item.content} className="flag-img-Summary"></img>   
                                                                     </div>
                                                                 )
                                                             })}

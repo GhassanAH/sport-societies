@@ -23,13 +23,13 @@ w_b1_a2, w_d1_c2,
         name:"Winner of Game 1",
         items:[]
     },
-    [id3]:{
-        name:"Game 2",
-        items:[w_a1_b2, w_c1_d2,]
-    },
     [id4]:{
         name:"Winner of Game 2",
         items:[]
+    },
+    [id3]:{
+        name:"Game 2",
+        items:[w_a1_b2, w_c1_d2,]
     },
     [id5]:{
         name:"Game 3",
@@ -39,14 +39,14 @@ w_b1_a2, w_d1_c2,
         name:"Winner of Game 3",
         items:[]
     },
-    [id7]:{
-        name:"Game 4",
-        items:[w_b1_a2, w_d1_c2,]
-    },
     [id8]:{
         name:"Winner of Game 4",
         items:[]
     },    
+    [id7]:{
+        name:"Game 4",
+        items:[w_b1_a2, w_d1_c2,]
+    },
 }
 }
 export default round8;
