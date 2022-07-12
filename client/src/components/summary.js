@@ -2,7 +2,6 @@ import React,{useEffect, useState, useRef} from 'react'
 import { connect } from 'react-redux'
 import '../css/summary.css'
 import fifa from "../img/fifa-qatar-2022-logo.png";
-import * as htmlToImage from 'html-to-image';
 import worldCup from "../img/worldCup2.jpeg"
 import { useNavigate } from "react-router-dom";
 import { Helmet } from 'react-helmet-async';
@@ -26,39 +25,41 @@ const Summary = ({data, data2, data3, data4,data5,data6}) => {
 
 
     useEffect(() => {
-        setRound164([
-            data2["Game 1 16"],
-            data2["Game 3 16"],
-            data2["Game 5 16"],
-            data2["Game 7 16"],
+        setRound164({
+            Game116:data2["Game116"],
+            Game316:data2["Game316"],
+            Game516:data2["Game516"],
+            Game716:data2["Game716"],
     
-        ])
-        setRound82([
-          data3["Game 2 8"],  
-          data3["Game 1 8"], 
-        ])
-        setRound84([
-            data3["Game 4 8"], 
-         
-            data3["Game 3 8"],  
-        ])
-        setRound41([
-            data4["Game 1 4"]
-        ])
-        setRound42([
-            data4["Game 2 4"]
-        ])
-        setRoundf1([
-            data6["Game 1 1"],
-            data5["Game 1 2"]
+        })
+        setRound82({
+            Game28:data3["Game28"],  
+            Game18:data3["Game18"], 
+        }
+    
+        )
+        setRound84({
+            Game48:data3["Game48"], 
+            Game38:data3["Game38"],  
+        })
+        setRound41({
+            Game14:data4["Game14"]
+        })
+        setRound42({
+            Game24:data4["Game24"]
+        })
+        setRoundf1({
+            Game11:data6["Game11"],
+            Game12:data5["Game12"]
             
-        ])
-        setRound168([
-            data2["Game 2 16"],
-            data2["Game 4 16"], 
-            data2["Game 6 16"],
-            data2["Game 8 16"], 
-        ])
+        })
+        setRound168({
+            Game216:data2["Game216"],
+            Game416:data2["Game416"], 
+            Game616:data2["Game616"],
+            Game816:data2["Game816"], 
+        })
+
 
 
     },[data2, data3, data4, data5, data6])
@@ -75,20 +76,13 @@ const Summary = ({data, data2, data3, data4,data5,data6}) => {
         fakeLink.click();
         document.body.removeChild(fakeLink);
         fakeLink.remove();
-        // htmlToImage.toPng(container, { quality: 0.95 })
-        //            .then(function (dataUrl) {
-        //                 var link = document.createElement('a');
-        //                 link.download = 'YourWorldCupPrediction.png';
-        //                 link.href = dataUrl;
-        //                 link.click();
-        //                 navigate("/",{ replace: true })
-        //             });
         window.localStorage.removeItem("groups")
         window.localStorage.removeItem("round16")
         window.localStorage.removeItem("round4")
         window.localStorage.removeItem("round8")
         window.localStorage.removeItem("final")
         window.localStorage.removeItem("winner")
+        navigate("/",{ replace: true })
       
         
     }
@@ -184,15 +178,15 @@ const Summary = ({data, data2, data3, data4,data5,data6}) => {
                         <div className="roundContainer">
                                 <div className="grid2ContainerSummary">
                                         <div className="main2ItemSummary">
-                                            {round164 && Object.entries(round164).map(([columnId, column], index) =>{
+                                            {round164 && Object.keys(round164).map((columnId, index) =>{
                                                 return(
                                                     <div
-                                                    key={columnId}
-                                                    className="box"
+                                                    key={index}
+                                                    className={"box "+columnId}
                                                     >
                                                         
                                                         <div>
-                                                            {column.items.map((item, index) => {
+                                                            {round164[columnId].items.map((item, index) => {
                                                                 return(
                                                                     <div className="column-selector-Summary" key={index*10-9}>  
                                                                         <img src={item.imgUrl} alt={item.content} className="flag-img-Summary"></img>  
@@ -206,15 +200,15 @@ const Summary = ({data, data2, data3, data4,data5,data6}) => {
                                             })}
                                         </div>
                                         <div className="main2ItemSummary">
-                                            {round82 && Object.entries(round82).map(([columnId, column], index) =>{
+                                            {round82 && Object.keys(round82).map((columnId, index) =>{
                                                 return(
                                                     <div
-                                                    key={columnId}
-                                                    className="box"
+                                                    key={index}
+                                                    className={"box "+columnId}
 
                                                     >
                                                         <div>
-                                                            {column.items.map((item, index) => {
+                                                            {round82[columnId].items.map((item, index) => {
                                                                 return(
                                                                     <div className="column-selector-Summary " key={index*10-8}>
                                                                         <img src={item.imgUrl} alt={item.content} className="flag-img-Summary"></img>   
@@ -228,15 +222,15 @@ const Summary = ({data, data2, data3, data4,data5,data6}) => {
                                             })}
                                         </div>
                                         <div className="main2ItemSummary">
-                                            {round41 && Object.entries(round41).map(([columnId, column], index) =>{
+                                            {round41 && Object.keys(round41).map((columnId, index) =>{
                                                 return(
                                                     <div
-                                                    key={columnId}
-                                                    className="box"
+                                                    key={index}
+                                                    className={"box "+columnId}
                                                     >
                                                         
                                                         <div>
-                                                            {column.items.map((item, index) => {
+                                                            {round41[columnId].items.map((item, index) => {
                                                                 return(
                                                                     <div className="column-selector-Summary" key={index*10-6}>
                                                                         <img src={item.imgUrl} alt={item.content} className="flag-img-Summary"></img>
@@ -251,17 +245,17 @@ const Summary = ({data, data2, data3, data4,data5,data6}) => {
                                             })}
                                         </div>
                                         <div className="main2ItemSummary" style={{height:"500px"}}>
-                                            {roundf1 && Object.entries(roundf1).map(([columnId, column], index) =>{
-                                                if(column.name === "World Cup Winner"){
+                                            {roundf1 && Object.keys(roundf1).map((columnId, index) =>{
+                                                if(roundf1[columnId].name === "World Cup Winner"){
                                                     return(
                                                         <div
-                                                        key={columnId}
-                                                        className="box"
+                                                        key={index}
+                                                        className={"box "+columnId}
                                                         
                                                         >
                                                             
                                                             <div>
-                                                                {column.items.map((item, index) => {
+                                                                {roundf1[columnId].items.map((item, index) => {
                                                                     return(
                                                                         <div className="column-selector-Summary" style={{flexDirection:"column"}} key={index*10-5}>
                                                                             <img src={worldCup} alt="worldCup" className="world-img-Summary"></img>
@@ -277,11 +271,11 @@ const Summary = ({data, data2, data3, data4,data5,data6}) => {
                                                     return(
                                                         <div
                                                         key={columnId}
-                                                        className="box"
+                                                        className={"box "+columnId}
                                                         >
                                                             
                                                             <div>
-                                                                {column.items.map((item, index) => {
+                                                                {roundf1[columnId].items.map((item, index) => {
                                                                     return(
                                                                         <div className="column-selector-Summary" key={index*10-4}>
                                                                             <img src={item.imgUrl} alt={item.content} className="flag-img-Summary"></img>    
@@ -296,15 +290,15 @@ const Summary = ({data, data2, data3, data4,data5,data6}) => {
                                             })}
                                         </div>
                                         <div className="main2ItemSummary">
-                                            {round42 && Object.entries(round42).map(([columnId, column], index) =>{
+                                            {round42 && Object.keys(round42).map((columnId, index) =>{
                                                 return(
                                                     <div
-                                                    key={columnId}
-                                                    className="box"
+                                                    key={index}
+                                                    className={"box "+columnId}
                                                     >
                                                         
                                                         <div>
-                                                            {column.items.map((item, index) => {
+                                                            {round42[columnId].items.map((item, index) => {
                                                                 return(
                                                                     <div className="column-selector-Summary" key={index*10-3}>
                                                                         <img src={item.imgUrl} alt={item.content} className="flag-img-Summary"></img>    
@@ -318,15 +312,15 @@ const Summary = ({data, data2, data3, data4,data5,data6}) => {
                                             })}
                                         </div>
                                         <div className="main2ItemSummary">
-                                            {round84 && Object.entries(round84).map(([columnId, column], index) =>{
+                                            {round84 && Object.keys(round84).map((columnId, index) =>{
                                                 return(
                                                     <div
-                                                    key={columnId}
-                                                    className="box"
+                                                    key={index}
+                                                    className={"box "+columnId}
                                                     >
                                                         
                                                         <div>
-                                                            {column.items.map((item, index) => {
+                                                            {round84[columnId].items.map((item, index) => {
                                                                 return(
                                                                     <div className="column-selector-Summary" key={index*10-2}>
                                                                         <img src={item.imgUrl} alt={item.content} className="flag-img-Summary"></img>  
@@ -340,15 +334,15 @@ const Summary = ({data, data2, data3, data4,data5,data6}) => {
                                             })}
                                         </div>
                                         <div className="main2ItemSummary">
-                                            {round168 && Object.entries(round168).map(([columnId, column], index) =>{
+                                            {round168 && Object.keys(round168).map((columnId, index) =>{
                                                 return(
                                                     <div
-                                                    key={columnId}
-                                                    className="box"
+                                                    key={index}
+                                                    className={"box "+columnId}
                                                     >
                                                         
                                                         <div>
-                                                            {column.items.map((item, index) => {
+                                                            {round168[columnId].items.map((item, index) => {
                                                                 return(
                                                                     <div className="column-selector-Summary" key={index*10-1}>
                                                                         <img src={item.imgUrl} alt={item.content} className="flag-img-Summary"></img>   
@@ -362,9 +356,13 @@ const Summary = ({data, data2, data3, data4,data5,data6}) => {
                                             })}
                                         </div>
                                     </div>
+
+     
                         </div>
+
                     </div>
                 </div>
+               
                 <button className="container-btn-Summary" onClick={onDownload}>Download Your Prediction</button>
             </div>
         </>

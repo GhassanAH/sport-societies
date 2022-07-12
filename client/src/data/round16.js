@@ -9,26 +9,27 @@ firstF, secondF,
 firstG, secondG,
 firstH, secondH
 ) => {
-    const id1 = "Game 1 16"
-    const id2 = "Game 1 16r"
-    const id3 = "Game 2 16"
-    const id4 = "Game 2 16r"
-    const id5 = "Game 3 16"
-    const id6 = "Game 3 16r"
-    const id7 = "Game 4 16"
-    const id8 = "Game 4 16r"
-    const id9 = "Game 5 16"
-    const id10 = "Game 5 16r"
-    const id11 = "Game 6 16"
-    const id12 = "Game 6 16r"
-    const id13 = "Game 7 16"
-    const id14 = "Game 7 16r"
-    const id15 = "Game 8 16"
-    const id16 = "Game 8 16r"
+    const id1 = "Game116"
+    const id2 = "Game116r"
+    const id3 = "Game216"
+    const id4 = "Game216r"
+    const id5 = "Game316"
+    const id6 = "Game316r"
+    const id7 = "Game416"
+    const id8 = "Game416r"
+    const id9 = "Game516"
+    const id10 = "Game516r"
+    const id11 = "Game616"
+    const id12 = "Game616r"
+    const id13 = "Game716"
+    const id14 = "Game716r"
+    const id15 = "Game816"
+    const id16 = "Game816r"
    return { 
     [id1]:{
         name:"Game 1",
-        items:[firstA, secondB,]
+        items:[firstA, secondB,],
+        id:"Game1"
     },
     [id2]:{
         name:"Winner of Game 1",
@@ -36,15 +37,18 @@ firstH, secondH
     },
     [id6]:{
         name:"winner of Game 2",
-        items:[]
-    },
+        items:[],    },
     [id5]:{
         name:"Game 2",
-        items:[firstC, secondD,]
+        items:[firstC, secondD,],
+        id:"Game2"
+
     },
     [id7]:{
         name:"Game 3",
-        items:[firstD, secondC,]
+        items:[firstD, secondC,],
+        id:"Game3"
+
     },
     [id8]:{
         name:"Winner of Game 3",
@@ -56,11 +60,15 @@ firstH, secondH
     },    
     [id3]:{
         name:"Game 4",
-        items:[firstB, secondA,]
+        items:[firstB, secondA,],
+        id:"Game4"
+
     },
     [id9]:{
         name:"Game 5",
-        items:[firstE, secondF,]
+        items:[firstE, secondF,],
+        id:"Game5"
+
     },
     [id10]:{
         name:"Winner of Game 5",
@@ -72,11 +80,15 @@ firstH, secondH
     },   
     [id13]:{
         name:"Game 6",
-        items:[firstG, secondH,]
+        items:[firstG, secondH,],
+        id:"Game6"
+
     },
     [id11]:{
         name:"Game 7",
-        items:[firstF, secondE,]
+        items:[firstF, secondE,],
+        id:"Game7"
+
     },
     [id12]:{
         name:"Winner of Game 7",
@@ -88,7 +100,9 @@ firstH, secondH
     },  
     [id15]:{
         name:"Game 8",
-        items:[firstH, secondG]
+        items:[firstH, secondG],
+        id:"Game8"
+
     },
 }
 }
