@@ -5,7 +5,7 @@ import fifa from "../img/fifa-qatar-2022-logo.png";
 import worldCup from "../img/worldCup2.jpeg"
 import { useNavigate } from "react-router-dom";
 import { Helmet } from 'react-helmet-async';
-import html2canvas from "html2canvas";
+import { toPng } from 'html-to-image';
 
 
 
@@ -65,13 +65,25 @@ const Summary = ({data, data2, data3, data4,data5,data6}) => {
     },[data2, data3, data4, data5, data6])
 
     const onDownload = async () => {
-        const container = ref.current;
-        const canvas = await html2canvas(container);
-        const image = canvas.toDataURL("image/png", 1.0);
+        const containeri = ref.current;
+        var imageUrl = await toPng(containeri, { cacheBust: true,});
+        console.log(window.innerWidth)
+        if(window.innerWidth < 800 && window.innerWidth > 600){
+            imageUrl = await toPng(containeri, { cacheBust: true, canvasWidth: 1000});
+        }else if(window.innerWidth < 600 && window.innerWidth > 400){
+            imageUrl = await toPng(containeri, { cacheBust: true, canvasWidth: 1500});
+
+        }else if(window.innerWidth < 400){
+            imageUrl = await toPng(containeri, { cacheBust: true,quality:1, width:450, canvasHeight:500});
+
+        }
+
+    
+
         const fakeLink = window.document.createElement("a");
         fakeLink.style = "display:none;";
         fakeLink.download ="YourWorldCupPrediction.png"
-        fakeLink.href = image;
+        fakeLink.href =imageUrl;
         document.body.appendChild(fakeLink);
         fakeLink.click();
         document.body.removeChild(fakeLink);

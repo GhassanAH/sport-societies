@@ -73,7 +73,8 @@
 }
 .mainContainerSummary .main-wrapper .summary-container .gridContainerSummary .mainItemSummary h3{
     font-size: 1.4rem;
-    font-weight: bold; 
+    font-weight: bolder; 
+    width: 100%;
 }
 .mainContainerSummary .main-wrapper .summary-container .gridContainerSummary .mainItemSummary .column-wrapper{
     width: 100%;
@@ -98,7 +99,7 @@
     border: none !important;
 }
 .mainContainerSummary .main-wrapper .summary-container .gridContainerSummary .mainItemSummary  .column-selector-Summary .contentSummary{
-    font-size: 1.3rem;
+    font-size: 1rem;
     background-color: #FFDF00;
     margin-left: 20px;
     color: #222;
@@ -357,18 +358,20 @@
 @media (max-width: 600px) {
     .mainContainerSummary .main-wrapper .container-info-Summary{
         width: 100%;
-        margin: .2rem;
+        margin: 2rem;
     
     }
     .mainContainerSummary .main-wrapper .container-info-Summary .world-cup-logo-Summary{
-        width: 25%;
+        width: 50%;
+        height: 150px;
         margin-left:.3rem;
         margin-right:.4rem;
     
     }
     .mainContainerSummary .main-wrapper .container-info-Summary .container-info-heading-Summary{
-        width: 75%;
-        font-size: .5rem;
+        width: 30%;
+        font-size: 1rem;
+        text-align: center;
     }
     .mainContainerSummary .main-wrapper .summary-container .gridContainerSummary{
         width: 95%;
@@ -381,11 +384,11 @@
         width: 25%;
     }
     .mainContainerSummary .main-wrapper .summary-container .gridContainerSummary .mainItemSummary h3{
-        font-size: .4rem; 
+        font-size: .8rem; 
     }
     .mainContainerSummary .main-wrapper .summary-container .gridContainerSummary .mainItemSummary  .column-selector-Summary .flag-img-Summary{
         width:100%;
-        height: 40px;
+        height: 50px;
     }
     .mainContainerSummary .main-wrapper .summary-container .gridContainerSummary .mainItemSummary  .column-selector-Summary .contentSummary{
         font-size: .6rem;
@@ -424,7 +427,7 @@
     }
     .mainContainerSummary .main-wrapper .summary-container .roundContainer .grid2ContainerSummary .main2ItemSummary  .box .column-selector-Summary .flag-img-Summary{
         width: 100%;
-        height: 30px;
+        height: 50px;
     }
     .mainContainerSummary .main-wrapper .summary-container .roundContainer .grid2ContainerSummary .main2ItemSummary  .box .column-selector-Summary .world-img-Summary{
         width:30px;
