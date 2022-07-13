@@ -94,7 +94,7 @@ const Summary = ({data, data2, data3, data4,data5,data6}) => {
         window.localStorage.removeItem("round8")
         window.localStorage.removeItem("final")
         window.localStorage.removeItem("winner")
-        // navigate("/",{ replace: true })
+        navigate("/",{ replace: true })
       
         
     }
