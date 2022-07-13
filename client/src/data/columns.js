@@ -33,80 +33,80 @@ import Uruguay from '../img/uy-flag.gif'
 import South from '../img/ks-flag.webp'
 const data = {
     [uuidv4()]:{
-        name:"Group A",
+        name:"GP A",
         items:[
-            { id: uuidv4(), position:1, content: "Qatar ", imgUrl:Qatar },
-            { id: uuidv4(), position:2, content: "Ecuador " ,imgUrl:Ecuador},
-            { id: uuidv4(), position:3, content: "Senegal " ,imgUrl:Senegal},
-            { id: uuidv4(), position:4, content: "Netherlands " ,imgUrl:Netherlands},
+            { id: uuidv4(), position:1, content: "Qat", imgUrl:Qatar },
+            { id: uuidv4(), position:2, content: "Ecu" ,imgUrl:Ecuador},
+            { id: uuidv4(), position:3, content: "Sen" ,imgUrl:Senegal},
+            { id: uuidv4(), position:4, content: "Net" ,imgUrl:Netherlands},
            
         ]
     },
     [uuidv4()]:{
-        name:"Group B",
+        name:"GP B",
         items:[
-            { id: uuidv4(), position:1, content: "England " ,imgUrl:England},
-            { id: uuidv4(), position:2, content: "Iran " ,imgUrl:Iran},
-            { id: uuidv4(), position:3, content: "USA " ,imgUrl:USA},
-            { id: uuidv4(), position:4, content: "Wales " ,imgUrl:Wales},
+            { id: uuidv4(), position:1, content: "Eng" ,imgUrl:England},
+            { id: uuidv4(), position:2, content: "Ira" ,imgUrl:Iran},
+            { id: uuidv4(), position:3, content: "USA" ,imgUrl:USA},
+            { id: uuidv4(), position:4, content: "Wal" ,imgUrl:Wales},
         ]
     },
     [uuidv4()]:{
-        name:"Group C",
+        name:"GP C",
         items:[
-            { id: uuidv4(), position:1, content: "Argentina " ,imgUrl:Argentina},
-            { id: uuidv4(), position:2, content: "Saudi Arabia " ,imgUrl:Saudi},
-            { id: uuidv4(), position:3, content: "Mexico " ,imgUrl:Mexico},
-            { id: uuidv4(), position:4, content: "Poland " ,imgUrl:Poland},
+            { id: uuidv4(), position:1, content: "Arg" ,imgUrl:Argentina},
+            { id: uuidv4(), position:2, content: "KSA" ,imgUrl:Saudi},
+            { id: uuidv4(), position:3, content: "Mex" ,imgUrl:Mexico},
+            { id: uuidv4(), position:4, content: "Pol" ,imgUrl:Poland},
            
         ]
     },
     [uuidv4()]:{
-        name:"Group D",
+        name:"GP D",
         items:[
-            { id: uuidv4(), position:1, content: "France " ,imgUrl:France},
-            { id: uuidv4(), position:2, content: "Australia " ,imgUrl:Australia},
-            { id: uuidv4(), position:3, content: "Denmark " ,imgUrl:Denmark},
-            { id: uuidv4(), position:4, content: "Tunisia " ,imgUrl:Tunisia},
+            { id: uuidv4(), position:1, content: "Fra" ,imgUrl:France},
+            { id: uuidv4(), position:2, content: "Aus" ,imgUrl:Australia},
+            { id: uuidv4(), position:3, content: "Den" ,imgUrl:Denmark},
+            { id: uuidv4(), position:4, content: "Tun" ,imgUrl:Tunisia},
             
         ]
     },    [uuidv4()]:{
-        name:"Group E",
+        name:"GP E",
         items:[
-            { id: uuidv4(), position:1, content: "Spain " ,imgUrl:Spain},
-            { id: uuidv4(), position:2, content: "Costa Rica " ,imgUrl:Costa},
-            { id: uuidv4(), position:3, content: "Germany " ,imgUrl:Germany},
-            { id: uuidv4(), position:4, content: "Japan " ,imgUrl:Japan},
+            { id: uuidv4(), position:1, content: "Spa" ,imgUrl:Spain},
+            { id: uuidv4(), position:2, content: "CR" ,imgUrl:Costa},
+            { id: uuidv4(), position:3, content: "Ger" ,imgUrl:Germany},
+            { id: uuidv4(), position:4, content: "Jap" ,imgUrl:Japan},
            
            
         ]
     },
     [uuidv4()]:{
-        name:"Group F",
+        name:"GP F",
         items:[
-            { id: uuidv4(), position:1, content: "Belgium " ,imgUrl:Belgium},
-            { id: uuidv4(), position:2, content: "Canada " ,imgUrl:Canada},
-            { id: uuidv4(), position:3, content: "Morocco " ,imgUrl:Morocco},
-            { id: uuidv4(), position:4, content: "Croatia " ,imgUrl:Croatia},
+            { id: uuidv4(), position:1, content: "Bel" ,imgUrl:Belgium},
+            { id: uuidv4(), position:2, content: "Can" ,imgUrl:Canada},
+            { id: uuidv4(), position:3, content: "Mor" ,imgUrl:Morocco},
+            { id: uuidv4(), position:4, content: "Croa" ,imgUrl:Croatia},
         ]
     },
     [uuidv4()]:{
-        name:"Group G",
+        name:"GP G",
         items:[
-            { id: uuidv4(), position:1, content: "Brazil " ,imgUrl:Brazil},
-            { id: uuidv4(), position:2, content: "Serbia " ,imgUrl:Serbia},
-            { id: uuidv4(), position:3, content: "Switzerland " ,imgUrl:Switzerland},
-            { id: uuidv4(), position:4, content: "Cameroon " ,imgUrl:Cameroon},
+            { id: uuidv4(), position:1, content: "Braz" ,imgUrl:Brazil},
+            { id: uuidv4(), position:2, content: "Ser" ,imgUrl:Serbia},
+            { id: uuidv4(), position:3, content: "Swi" ,imgUrl:Switzerland},
+            { id: uuidv4(), position:4, content: "Cam" ,imgUrl:Cameroon},
            
         ]
     },
     [uuidv4()]:{
-        name:"Group H",
+        name:"GP H",
         items:[
-            { id: uuidv4(), position:1, content: "Portugal " ,imgUrl:Portugal},
-            { id: uuidv4(), position:2, content: "Ghana " ,imgUrl:Ghana},
-            { id: uuidv4(), position:3, content: "Uruguay " ,imgUrl:Uruguay},
-            { id: uuidv4(), position:4, content: "South Korea " ,imgUrl:South},
+            { id: uuidv4(), position:1, content: "Por" ,imgUrl:Portugal},
+            { id: uuidv4(), position:2, content: "Gha" ,imgUrl:Ghana},
+            { id: uuidv4(), position:3, content: "Uru" ,imgUrl:Uruguay},
+            { id: uuidv4(), position:4, content: "SK" ,imgUrl:South},
         ]
     }
 }

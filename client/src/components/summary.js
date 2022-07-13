@@ -74,7 +74,7 @@ const Summary = ({data, data2, data3, data4,data5,data6}) => {
             imageUrl = await toPng(containeri, { cacheBust: true, canvasWidth: 1500});
 
         }else if(window.innerWidth < 400){
-            imageUrl = await toPng(containeri, { cacheBust: true,quality:1, width:450, canvasHeight:500});
+            imageUrl = await toPng(containeri, { cacheBust: true,quality:1, width:450, canvasWidth:380, canvasHeight:500});
 
         }
 
@@ -94,7 +94,7 @@ const Summary = ({data, data2, data3, data4,data5,data6}) => {
         window.localStorage.removeItem("round8")
         window.localStorage.removeItem("final")
         window.localStorage.removeItem("winner")
-        navigate("/",{ replace: true })
+        // navigate("/",{ replace: true })
       
         
     }
@@ -119,7 +119,7 @@ const Summary = ({data, data2, data3, data4,data5,data6}) => {
                     <div className="summary-container">
                             <div className="gridContainerSummary">
                                     {Object.entries(data).map(([columnId, column], index) =>{
-                                        if(column.name === "Group A" || column.name === "Group B" || column.name === "Group C" || column.name === "Group D"){
+                                        if(column.name === "GP A" || column.name === "GP B" || column.name === "GP C" || column.name === "GP D"){
                                             return(
                                                 <div
                                                 className="mainItemSummary"
@@ -154,7 +154,7 @@ const Summary = ({data, data2, data3, data4,data5,data6}) => {
                         </div>
                         <div className="gridContainerSummary">
                                     {Object.entries(data).map(([columnId, column], index) =>{
-                                        if(column.name === "Group E" || column.name === "Group F" || column.name === "Group G" || column.name === "Group H"){
+                                        if(column.name === "GP E" || column.name === "GP F" || column.name === "GP G" || column.name === "GP H"){
                                             return(
                                                 <div
                                                 className="mainItemSummary"
