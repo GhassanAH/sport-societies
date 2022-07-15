@@ -8,6 +8,7 @@ import Summary from './components/summary';
 import Home from './components/home';
 import Header from './components/header';
 import Footer from './components/footer';
+import Aboutspw from './aboutspw';
 import {Routes, Route, BrowserRouter} from 'react-router-dom'
 import './css/home.css'
 
@@ -25,6 +26,7 @@ function App() {
                         <Route exact path="/round4"  element={<Round4/>}></Route>
                         <Route  path="/final"  element={<Final/>}></Route>
                         <Route  path="/summary"  element={<Summary/>}></Route>
+                        <Route  path="/aboutpage1"  element={<Aboutspw/>}></Route>
                   </Routes>
                </BrowserRouter>
             </div>

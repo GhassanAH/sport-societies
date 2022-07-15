@@ -90,8 +90,9 @@ body{
 }
 .wrapper .header .content{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
+    
 
 }
 .wrapper .header .content .title a h1{
@@ -100,7 +101,7 @@ body{
 }
 .wrapper .header .content .navs{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     width: 30%;
 
@@ -135,12 +136,11 @@ body{
 }
 .wrapper .footer .content{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-    padding-left: 2rem;
+    justify-content: flex-start;
+    align-items: flex-start;
     font-size: 100%;
     background-color: #1077C3;
+    width: 100%;
 
 }
 .wrapper .footer .content .title{
@@ -149,32 +149,38 @@ body{
     align-items: center;
     flex-direction: column;
     width: 40%;
-    
 }
 .wrapper .footer .content .navs{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 30%;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-direction: row;
+    width: 60%;
 
 }
-.wrapper .footer .content .navs .nav{
+.wrapper .footer .content .navs .nav2{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 0rem 1rem 1rem 1rem;
+
+
+}
+
+.wrapper .footer .content .navs .nav2 .link{
     display: flex;
     justify-content: center;
     align-items: center;
-
-}
-.wrapper .footer .content .navs .nav .link{
     color: #FFDF00;
     text-decoration: none;
 }
-.wrapper .footer .content .navs .nav .link:hover{
+.wrapper .footer .content .navs .nav2 .link:hover{
     color: #800020;
 
 }
 
-@media (max-width: 1200px){
+@media (max-width: 1300px){
     .wrapper .main{
         padding-bottom: 6rem;
         justify-content: flex-start;
@@ -218,6 +224,8 @@ body{
     }
     .wrapper .footer .content{
         padding-left: none;
+        align-items: center;
+        justify-content: center;
         font-size: 100%;
         flex-direction:column ;
     
@@ -228,7 +236,14 @@ body{
     }
     .wrapper .footer .content .navs{
         width: 90%;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
     
+    }
+    .wrapper .footer .content .navs .nav2{
+        justify-content: center;
+        align-items: flex-start;
     }
 
 }
