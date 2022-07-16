@@ -85,7 +85,7 @@
     justify-content: flex-start;
     align-items: center;
     user-select: none;
-    padding: 2px;
+    padding: 15px 4px;
     margin: 0px 0px 3px 0px;
     min-height: 5px;
     background-color: #FFDF00;
@@ -230,14 +230,14 @@
         width: 23%;
     }
     .mainContainerSummary .main-wrapper .summary-container .gridContainerSummary .mainItemSummary h3{
-        font-size: .7rem; 
+        font-size: 1rem; 
     }
     .mainContainerSummary .main-wrapper .summary-container .gridContainerSummary .mainItemSummary  .column-selector-Summary .flag-img-Summary{
         width:30%;
         height: 30px;
     }
     .mainContainerSummary .main-wrapper .summary-container .gridContainerSummary .mainItemSummary  .column-selector-Summary .contentSummary{
-        font-size: .7rem;
+        font-size: 1rem;
         margin-left: 10px;
     
     }
@@ -305,14 +305,14 @@
         width: 24%;
     }
     .mainContainerSummary .main-wrapper .summary-container .gridContainerSummary .mainItemSummary h3{
-        font-size: .6rem; 
+        font-size: .9rem; 
     }
     .mainContainerSummary .main-wrapper .summary-container .gridContainerSummary .mainItemSummary  .column-selector-Summary .flag-img-Summary{
         width:25%;
         height: 30px;
     }
     .mainContainerSummary .main-wrapper .summary-container .gridContainerSummary .mainItemSummary  .column-selector-Summary .contentSummary{
-        font-size: .65rem;
+        font-size: .9rem;
         margin-left: 5px;
     
     }
@@ -363,15 +363,15 @@
     
     }
     .mainContainerSummary .main-wrapper .container-info-Summary .world-cup-logo-Summary{
-        width: 50%;
+        width: 30%;
         height: 150px;
         margin-left:.3rem;
         margin-right:.4rem;
     
     }
     .mainContainerSummary .main-wrapper .container-info-Summary .container-info-heading-Summary{
-        width: 30%;
-        font-size: 1rem;
+        width: 60%;
+        font-size: .6rem;
         text-align: center;
     }
     .mainContainerSummary .main-wrapper .summary-container .gridContainerSummary{
@@ -436,3 +436,53 @@
 
     }
 }
+@media (max-width: 400px) {
+    .mainContainerSummary .main-wrapper .summary-container .gridContainerSummary .mainItemSummary  .column-selector-Summary .contentSummary{
+        font-size: .6rem;
+        font-size-adjust: 0.88;
+        margin-left: 5px;
+    }
+    
+    .mainContainerSummary .main-wrapper .summary-container .roundContainer{
+        width: 95%;
+    }
+    .mainContainerSummary .main-wrapper .summary-container .roundContainer .grid2ContainerSummary{
+        margin-top: 2rem;
+        font-size:.4rem;
+        
+    }
+    .mainContainerSummary .main-wrapper .summary-container .roundContainer .grid2ContainerSummary .main2ItemSummary{
+        margin: 0rem .2rem;
+        width: 100%;
+        height: 750px;
+
+    
+    }
+    .mainContainerSummary .main-wrapper .summary-container .roundContainer .grid2ContainerSummary .main2ItemSummary .box{
+        padding: 2px;
+        margin: .2rem .1rem;
+        border-radius: 4px;
+    
+       
+    }
+    .mainContainerSummary .main-wrapper .summary-container .roundContainer .grid2ContainerSummary .main2ItemSummary  .box .column-selector-Summary{
+        padding: 5px;
+        margin: 0px 0px 5px 0px;
+    
+    
+    }
+    .mainContainerSummary .main-wrapper .summary-container .roundContainer .grid2ContainerSummary .main2ItemSummary  .box .column-selector-Summary .flag-img-Summary{
+        width: 100%;
+        height: 50px;
+    }
+    .mainContainerSummary .main-wrapper .summary-container .roundContainer .grid2ContainerSummary .main2ItemSummary  .box .column-selector-Summary .world-img-Summary{
+        width:30px;
+        height: 40px;
+    }
+    .mainContainerSummary .container-btn-Summary{
+        width: 80%;
+        font-size: .7rem;
+
+    }
+}
+

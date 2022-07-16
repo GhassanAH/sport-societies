@@ -87,13 +87,13 @@ const data = {
             { id: uuidv4(), position:1, content: "Bel" ,imgUrl:Belgium},
             { id: uuidv4(), position:2, content: "Can" ,imgUrl:Canada},
             { id: uuidv4(), position:3, content: "Mor" ,imgUrl:Morocco},
-            { id: uuidv4(), position:4, content: "Croa" ,imgUrl:Croatia},
+            { id: uuidv4(), position:4, content: "Cro" ,imgUrl:Croatia},
         ]
     },
     [uuidv4()]:{
         name:"GP G",
         items:[
-            { id: uuidv4(), position:1, content: "Braz" ,imgUrl:Brazil},
+            { id: uuidv4(), position:1, content: "Bra" ,imgUrl:Brazil},
             { id: uuidv4(), position:2, content: "Ser" ,imgUrl:Serbia},
             { id: uuidv4(), position:3, content: "Swi" ,imgUrl:Switzerland},
             { id: uuidv4(), position:4, content: "Cam" ,imgUrl:Cameroon},

@@ -5,7 +5,8 @@ import fifa from "../img/fifa-qatar-2022-logo.png";
 import worldCup from "../img/worldCup2.jpeg"
 import { useNavigate } from "react-router-dom";
 import { Helmet } from 'react-helmet-async';
-import { toPng } from 'html-to-image';
+import { toBlob, toJpeg } from 'html-to-image';
+import Resizer from "react-image-file-resizer";
 
 
 
@@ -65,16 +66,21 @@ const Summary = ({data, data2, data3, data4,data5,data6}) => {
     },[data2, data3, data4, data5, data6])
 
     const onDownload = async () => {
-        const containeri = ref.current;
-        var imageUrl = await toPng(containeri, { cacheBust: true,});
-        console.log(window.innerWidth)
-        if(window.innerWidth < 800 && window.innerWidth > 600){
-            imageUrl = await toPng(containeri, { cacheBust: true, canvasWidth: 1000});
-        }else if(window.innerWidth < 600 && window.innerWidth > 400){
-            imageUrl = await toPng(containeri, { cacheBust: true, canvasWidth: 1500});
 
-        }else if(window.innerWidth < 400){
-            imageUrl = await toPng(containeri, { cacheBust: true,quality:1, width:450, canvasWidth:380, canvasHeight:500});
+
+        var imageUrl = "";
+        if(window.innerWidth > 1200){
+            imageUrl = await imageUrlGenerator(0,0,0,false);
+        }else if(window.innerWidth <= 1200 && window.innerWidth > 1100){
+            imageUrl = await imageUrlGenerator(1100,600,600,true);
+        }else if(window.innerWidth <= 1100 && window.innerWidth > 800){
+            imageUrl = await imageUrlGenerator(1000,600,600,true);
+        }else if(window.innerWidth <= 800 && window.innerWidth > 600){
+            imageUrl = await imageUrlGenerator(800,600,600,true);
+        }else if(window.innerWidth <= 600 && window.innerWidth > 400){
+            imageUrl = await imageUrlGenerator(600,600,600,true);
+        }else if(window.innerWidth <= 400){
+            imageUrl = await imageUrlGenerator(400,600,800,true);
 
         }
 
@@ -82,7 +88,7 @@ const Summary = ({data, data2, data3, data4,data5,data6}) => {
 
         const fakeLink = window.document.createElement("a");
         fakeLink.style = "display:none;";
-        fakeLink.download ="YourWorldCupPrediction.png"
+        fakeLink.download ="YourWorldCupPrediction.jpeg"
         fakeLink.href =imageUrl;
         document.body.appendChild(fakeLink);
         fakeLink.click();
@@ -98,6 +104,35 @@ const Summary = ({data, data2, data3, data4,data5,data6}) => {
       
         
     }
+    const resizeFile = (file) =>
+        new Promise((resolve) => {
+            Resizer.imageFileResizer(
+            file,
+            900,
+            900,
+            "JPEG",
+            100,
+            0,
+            (uri) => {
+                resolve(uri);
+            },
+            "base64"
+            );
+    });
+
+    const imageUrlGenerator = async (width,canvasWidth, canvasHeight, resize) => {
+        const containeri = ref.current;
+        var blob = await toBlob(containeri, {width:width, canvasWidth:canvasWidth, canvasHeight:canvasHeight});
+        const file = new File([blob], "image.jpeg");
+        if (resize){
+            const imageUrl = await resizeFile(file);
+            return imageUrl
+        }else{
+            const imageUrl = await toJpeg(containeri);
+            return imageUrl
+        }
+    }
+       
     return (
         <>       
              <Helmet>
