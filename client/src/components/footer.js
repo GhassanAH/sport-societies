@@ -17,6 +17,7 @@ const Footer = () => {
                         <div className="soc">
                         <a href="https://www.instagram.com/sportsocieties/" className="link" target="_blank" rel="noreferrer"><SocialIcon network="instagram"  style={{ height: 25, width: 25 , marginRight:5}} /><h3>instagram</h3></a>
                         <a href="https://twitter.com/SocietiesSport/" className="link" target="_blank" rel="noreferrer"><SocialIcon network="twitter" style={{ height: 25, width: 25, marginRight:5 }} /><h3>Twitter</h3></a>
+                        <a href="https://www.youtube.com/channel/UC1IYKQCHHgwaVT-7ov44yxA/videos" className="link" target="_blank" rel="noreferrer"><SocialIcon network="youtube" style={{ height: 25, width: 25, marginRight:5 }} /><h3>YouTube</h3></a>
                         </div>
 
                     </div>
