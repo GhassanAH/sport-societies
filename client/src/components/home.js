@@ -1,6 +1,8 @@
 import React from 'react'
 import '../css/home.css'
 import { useNavigate } from "react-router-dom";
+import { Helmet } from 'react-helmet-async';
+
 
 
 const Home = () => {
@@ -11,6 +13,13 @@ const Home = () => {
 
     }
     return (
+        <>
+        <Helmet>
+                <title>World Cup Qatar 2022 Predictions</title>
+                <meta name="description" content="Sport Societies || World Cup Qatar 2022 Prediction"/>
+                <meta name="keywords" content="Sport Societies, sport societies, world cup prediction, qatar2022, Round of 16, Quarterfinal, Semifinals, Groups stage, World cup Qatar 2022, prediction"/>
+                <link rel="canonical" href="/"/>
+        </Helmet>
         <div className="container">
 
             <div className="wrapper-container">
@@ -29,6 +38,7 @@ const Home = () => {
             </div>
             
         </div>
+        </>
     )
 }
 

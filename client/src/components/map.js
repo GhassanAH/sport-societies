@@ -87,9 +87,9 @@ const WorldMap = ({onSaveGroups, onSave16}) => {
     return (
            <>
            <Helmet>
-                <title>World Cup Qatar 2022 | Groups Stage Prediction</title>
-                <meta name="description" content="Pick the first team, the second team, the third team and the fourth team in every group"/>
-                <meta name="keywords" content="Groups, World cup Qatar 2022, Groups stage, prediction"/>
+                <title>FIFA World Cup Qatar 2022 | Groups Stage Prediction</title>
+                <meta name="description" content="Sport Societies || Pick the first team, the second team, the third team and the fourth team in every group"/>
+                <meta name="keywords" content="Sport Societies, sport societies, world cup prediction, qatar2022, Groups, World cup Qatar 2022, Groups stage, prediction"/>
                 <link rel="canonical" href="/groupsStage"/>
            </Helmet>
             <div className="mainContainer">

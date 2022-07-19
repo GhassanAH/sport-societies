@@ -95,8 +95,8 @@ const Round8 = ({data3, onSave4}) => {
         <>
         <Helmet>
                 <title>World Cup Qatar 2022 | Quarterfinal Predictions</title>
-                <meta name="description" content="Pick the Quarterfinal qualifiers in the World Cup Qatar 2022"/>
-                <meta name="keywords" content="Quarterfinals, Quarterfinal, World cup Qatar 2022, Quarterfinals stage, prediction"/>
+                <meta name="description" content="Sport Societies || Pick the Quarterfinal qualifiers in the World Cup Qatar 2022"/>
+                <meta name="keywords" content="Sport Societies, sport societies, Quarterfinals, Quarterfinal, World cup Qatar 2022, Quarterfinals stage, prediction"/>
                 <link rel="canonical" href="/round8"/>
         </Helmet>
         { round8Data &&  <div className="mainContainerRound16">

@@ -137,8 +137,8 @@ const Summary = ({data, data2, data3, data4,data5,data6}) => {
         <>       
              <Helmet>
                     <title>World Cup Qatar 2022 | Predictions Summary</title>
-                    <meta name="description" content="World Cup Qatar 2022 Prediction"/>
-                    <meta name="keywords" content="Round of 16, Quarterfinal, Semifinals, Groups stage, World cup Qatar 2022, prediction"/>
+                    <meta name="description" content="Sport Societies || World Cup Qatar 2022 Prediction"/>
+                    <meta name="keywords" content="Sport Societies, sport societies, Round of 16, Quarterfinal, Semifinals, Groups stage, World cup Qatar 2022, prediction"/>
                     <link rel="canonical" href="/summary"/>
              </Helmet>
             <div className="mainContainerSummary">

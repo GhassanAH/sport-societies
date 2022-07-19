@@ -94,8 +94,8 @@ const Round4 = ({data4, onSaveFinal}) => {
         <>
         <Helmet>
                 <title>World Cup Qatar 2022 | Semifinal Predictions</title>
-                <meta name="description" content="Pick the semifinal qualifiers in the World Cup Qatar 2022"/>
-                <meta name="keywords" content="semifinals, semifinal, World cup Qatar 2022, semifinals stage, prediction"/>
+                <meta name="description" content="Sport Societies, Pick the semifinal qualifiers in the World Cup Qatar 2022"/>
+                <meta name="keywords" content="Sport Societies, sport societies, semifinals, semifinal, World cup Qatar 2022, semifinals stage, prediction"/>
                 <link rel="canonical" href="/round4"/>
         </Helmet>
         { round4Data &&  <div className="mainContainerRound16">

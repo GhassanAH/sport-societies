@@ -7,6 +7,8 @@ import { connect } from 'react-redux'
 import {saveWinner} from '../actions'
 import winner from '../data/winner'
 import { useNavigate } from "react-router-dom";
+import { Helmet } from 'react-helmet-async';
+
 
 
 
@@ -92,6 +94,12 @@ const Fianl = ({data5, onSaveWinner}) => {
 
     return(
         <>
+        <Helmet>
+                <title>FIFA World Cup Qatar 2022 | final Stage Prediction</title>
+                <meta name="description" content="Sport Societies || Pick the FIFA World Cup Qatar 2022 team winner"/>
+                <meta name="keywords" content="Sport Societies, sport societies, world cup prediction, qatar2022, Groups, World cup Qatar 2022, Groups stage, prediction"/>
+                <link rel="canonical" href="/final"/>
+        </Helmet>
         { final &&  <div className="mainContainerRound16">
                 <div className="container-info-round16">
                     <img src={fifa} alt="fifa world cup logo" className="world-cup-logo-round16"></img>
