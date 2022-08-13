@@ -15,8 +15,8 @@ const Home = () => {
     return (
         <>
         <Helmet>
-                <title>World Cup Qatar 2022 Predictions</title>
-                <meta name="description" content="Sport Societies || World Cup Qatar 2022 Prediction"/>
+                <title>Sport Societies || World of Sports</title>
+                <meta name="description" content="Sport Societies is a sport paradise. It's where you find all sort of sport societies. It's the place where to see the match from different perspective, It's the world of football and other sports"/>
                 <meta name="keywords" content="Sport Societies, sport societies, world cup prediction, qatar2022, Round of 16, Quarterfinal, Semifinals, Groups stage, World cup Qatar 2022, prediction"/>
                 <link rel="canonical" href="/"/>
         </Helmet>
