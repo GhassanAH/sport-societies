@@ -282,6 +282,12 @@ body{
 
 }
 @media (max-width: 600px){
+    .wrapper .main{
+    padding-bottom: 8rem;
+    }
+    .wrapper .main .container{
+        height: 90vh;
+    }
     .wrapper .header .content .title a h1{
         font-size: 1.2rem;
     }

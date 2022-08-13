@@ -80,7 +80,7 @@ const Summary = ({data, data2, data3, data4,data5,data6}) => {
         }else if(window.innerWidth <= 600 && window.innerWidth > 400){
             imageUrl = await imageUrlGenerator(600,600,600,true);
         }else if(window.innerWidth <= 400){
-            imageUrl = await imageUrlGenerator(400,600,800,true);
+            imageUrl = await imageUrlGenerator(400,800,1100,true);
 
         }
 
@@ -154,7 +154,7 @@ const Summary = ({data, data2, data3, data4,data5,data6}) => {
                     <div className="summary-container">
                             <div className="gridContainerSummary">
                                     {Object.entries(data).map(([columnId, column], index) =>{
-                                        if(column.name === "GP A" || column.name === "GP B" || column.name === "GP C" || column.name === "GP D"){
+                                        if(column.name === "Group A" || column.name === "Group B" || column.name === "Group C" || column.name === "Group D"){
                                             return(
                                                 <div
                                                 className="mainItemSummary"
@@ -189,7 +189,7 @@ const Summary = ({data, data2, data3, data4,data5,data6}) => {
                         </div>
                         <div className="gridContainerSummary">
                                     {Object.entries(data).map(([columnId, column], index) =>{
-                                        if(column.name === "GP E" || column.name === "GP F" || column.name === "GP G" || column.name === "GP H"){
+                                        if(column.name === "Group E" || column.name === "Group F" || column.name === "Group G" || column.name === "Group H"){
                                             return(
                                                 <div
                                                 className="mainItemSummary"

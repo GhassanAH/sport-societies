@@ -33,7 +33,7 @@ import Uruguay from '../img/uy-flag.gif'
 import South from '../img/ks-flag.webp'
 const data = {
     [uuidv4()]:{
-        name:"GP A",
+        name:"Group A",
         items:[
             { id: uuidv4(), position:1, content: "Qat", imgUrl:Qatar },
             { id: uuidv4(), position:2, content: "Ecu" ,imgUrl:Ecuador},
@@ -43,7 +43,7 @@ const data = {
         ]
     },
     [uuidv4()]:{
-        name:"GP B",
+        name:"Group B",
         items:[
             { id: uuidv4(), position:1, content: "Eng" ,imgUrl:England},
             { id: uuidv4(), position:2, content: "Ira" ,imgUrl:Iran},
@@ -52,7 +52,7 @@ const data = {
         ]
     },
     [uuidv4()]:{
-        name:"GP C",
+        name:"Group C",
         items:[
             { id: uuidv4(), position:1, content: "Arg" ,imgUrl:Argentina},
             { id: uuidv4(), position:2, content: "KSA" ,imgUrl:Saudi},
@@ -62,7 +62,7 @@ const data = {
         ]
     },
     [uuidv4()]:{
-        name:"GP D",
+        name:"Group D",
         items:[
             { id: uuidv4(), position:1, content: "Fra" ,imgUrl:France},
             { id: uuidv4(), position:2, content: "Aus" ,imgUrl:Australia},
@@ -71,7 +71,7 @@ const data = {
             
         ]
     },    [uuidv4()]:{
-        name:"GP E",
+        name:"Group E",
         items:[
             { id: uuidv4(), position:1, content: "Spa" ,imgUrl:Spain},
             { id: uuidv4(), position:2, content: "CR" ,imgUrl:Costa},
@@ -82,7 +82,7 @@ const data = {
         ]
     },
     [uuidv4()]:{
-        name:"GP F",
+        name:"Group F",
         items:[
             { id: uuidv4(), position:1, content: "Bel" ,imgUrl:Belgium},
             { id: uuidv4(), position:2, content: "Can" ,imgUrl:Canada},
@@ -91,7 +91,7 @@ const data = {
         ]
     },
     [uuidv4()]:{
-        name:"GP G",
+        name:"Group G",
         items:[
             { id: uuidv4(), position:1, content: "Bra" ,imgUrl:Brazil},
             { id: uuidv4(), position:2, content: "Ser" ,imgUrl:Serbia},
@@ -101,7 +101,7 @@ const data = {
         ]
     },
     [uuidv4()]:{
-        name:"GP H",
+        name:"Group H",
         items:[
             { id: uuidv4(), position:1, content: "Por" ,imgUrl:Portugal},
             { id: uuidv4(), position:2, content: "Gha" ,imgUrl:Ghana},
