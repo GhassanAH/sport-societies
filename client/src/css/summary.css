@@ -36,8 +36,20 @@
     justify-content: center;
     flex-direction: column;
     width: 80%;
+}
+.mainContainerSummary .main-wrapper .container-info-Summary .container-info-heading-Summary .he2{
+    font-size: 1.5rem;
     text-transform: uppercase;
-    font-size: 1.2rem;
+    font-weight: bold;
+    align-items: center;
+
+}
+.mainContainerSummary .main-wrapper .container-info-Summary .container-info-heading-Summary .he3{
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    align-items: center;
+
 }
 .mainContainerSummary .main-wrapper .summary-container {
     display: flex;
@@ -220,7 +232,12 @@
     }
     .mainContainerSummary .main-wrapper .container-info-Summary .container-info-heading-Summary{
         width: 70%;
-        font-size: .8rem;
+    }
+    .mainContainerSummary .main-wrapper .container-info-Summary .container-info-heading-Summary .he2{
+        font-size: 1.3rem;
+    }
+    .mainContainerSummary .main-wrapper .container-info-Summary .container-info-heading-Summary .he3{
+        font-size: 1.1rem;
     }
     .mainContainerSummary .main-wrapper .summary-container .gridContainerSummary{
         width: 90%;
@@ -295,7 +312,12 @@
     }
     .mainContainerSummary .main-wrapper .container-info-Summary .container-info-heading-Summary{
         width: 70%;
-        font-size: .6rem;
+    }
+    .mainContainerSummary .main-wrapper .container-info-Summary .container-info-heading-Summary .he2{
+        font-size: 1.1rem;
+    }
+    .mainContainerSummary .main-wrapper .container-info-Summary .container-info-heading-Summary .he3{
+        font-size: .9rem;
     }
     .mainContainerSummary .main-wrapper .summary-container .gridContainerSummary{
         width: 95%;
@@ -374,8 +396,16 @@
     }
     .mainContainerSummary .main-wrapper .container-info-Summary .container-info-heading-Summary{
         width: 60%;
-        font-size: .6rem;
+    }
+    .mainContainerSummary .main-wrapper .container-info-Summary .container-info-heading-Summary .he2{
+        font-size: .9rem;
         text-align: center;
+
+    }
+    .mainContainerSummary .main-wrapper .container-info-Summary .container-info-heading-Summary .he3{
+        font-size: .7rem;
+        text-align: center;
+
     }
     .mainContainerSummary .main-wrapper .summary-container .gridContainerSummary{
         width: 95%;
@@ -502,6 +532,15 @@
 @media (max-width: 300px) {
     .mainContainerSummary .main-wrapper .summary-container .gridContainerSummary .mainItemSummary h3{
         font-size: .6rem; 
+    }
+    .mainContainerSummary .main-wrapper .container-info-Summary .container-info-heading-Summary .he2{
+        font-size: .7rem;
+
+    }
+    .mainContainerSummary .main-wrapper .container-info-Summary .container-info-heading-Summary .he3{
+        font-size: .5rem;
+      
+
     }
 
 }

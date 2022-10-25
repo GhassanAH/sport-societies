@@ -1,0 +1,138 @@
+.he{
+    font-size: 1.2rem;
+    font-weight: bold;
+
+}
+.cml{
+    background-color: blue;
+    color: #fff;
+    width: 5%;
+}
+.cms{
+    background-color: red;
+    color: #fff;
+}
+.url{
+    background-color: orange;
+    color: #fff;
+}
+.ufe{
+    background-color: goldenrod;
+    color: #fff;
+}
+.con-st{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.con-st .st-con{
+    width: 90%;
+    background-color: #fff;
+    padding: 10px;
+
+}
+.con-st .st-con .st-teams{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+
+}
+.con-st .st-con .st-teams .st-group{
+    font-size: 1rem;
+    font-weight: bold;
+    width: 100%;
+    margin: 10px 0px;
+
+    
+}
+.con-st .st-con .st-teams .st-group .st-he3{
+    font-weight: bold;
+    color: #800020;
+
+}
+.con-st .st-con .st-teams .st-group .st-team{
+    background-color: #800020;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 12px;
+    width: 100%;
+    color: #fff;
+}
+.con-st .st-con .st-teams .st-group .st-head{
+    background-color: #FFDF00;
+    color: #222;
+
+}
+.con-st .st-con .st-teams .st-group .st-team .st-grid-img{
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+.con-st .st-con .st-teams .st-group .st-team .st-rk{
+    width: 3%;
+    text-align: center;
+}
+.con-st .st-con .st-teams .st-group .st-team  .st-g-name{
+    width: 50%;
+    font-size: 1.3rem;
+}
+.con-st .st-con .st-teams .st-group .st-team .st-p{
+    width: 5%;
+
+
+}
+.con-st .st-con .st-row{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+
+}
+.con-st .st-con .st-row .st-img{
+    width: 30px;
+    height: 30px;
+    padding: 2px;
+    
+}
+.con-st .st-con .st-row .st-col1{
+    font-size: 1rem;
+    padding: 6px;
+    width: 7%; 
+    text-align: center;
+}
+.con-st .st-con .st-row .st-col2{
+    padding: 6px;
+    width: 20%; 
+}
+.con-st .st-con .st-row .st-col3{
+    padding: 6px;
+    width: 20%;
+    display: flex; 
+    justify-content: flex-start;
+    align-items: center;
+}
+.con-st .st-con .st-row .st-col3 .win{
+    background-color: greenyellow;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+.con-st .st-con .st-row .st-col3 .draw{
+    background-color: gainsboro;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+
+}
+.con-st .st-con .st-row .st-col3 .lost{
+    background-color: red;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+
+}

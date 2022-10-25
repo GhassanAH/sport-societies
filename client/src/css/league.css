@@ -1,0 +1,24 @@
+.le-con .img-le{
+    width: 100%;
+    height: 500px;
+}
+.nav-tabs{
+    background-color: #fff;
+    padding: 0;
+}
+.nav-tabs .nav-item{
+    border-radius: none;
+}
+.nav-tabs .nav-item .nav-link{
+    color: #1077C3;
+    border-top-left-radius: unset;
+    border-top-right-radius: unset;
+}
+
+.nav-tabs .nav-item .active{
+    color: #fff;
+    font-size: 1.2rem;
+    background-color: #1077C3;
+    border: none;
+
+}

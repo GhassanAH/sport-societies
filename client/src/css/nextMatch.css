@@ -1,0 +1,51 @@
+.nm-he{
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 1px solid #222;
+
+}
+.nm-con{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.nm-con .nm-row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    background-color: #fff;
+    padding: 12px;
+}
+.nm-con .nm-row .nm-col{
+    padding: 12px;
+    width: 100%;
+}
+.nm-con .nm-row .nm-col .nm-sec{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+}
+.nm-con .nm-row .nm-col .nm-sec .nm-img{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+.nm-con .nm-row .nm-col .nm-sec .nm-team{
+    width: 20%;
+    font-size: 1rem;
+}
+.nm-con .nm-row .nm-col .nm-sec .nm-details{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1rem;
+    width: 50%;
+    font-weight: 300;
+    text-align: center;
+    border-bottom: 1px solid #222;
+}

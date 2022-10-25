@@ -1,12 +1,13 @@
 import React,{useState} from 'react';
 import {DragDropContext, Draggable, Droppable} from "react-beautiful-dnd"
-import '../css/roundSixteen.css'
-import fifa from "../img/fifa-qatar-2022-logo.png";
+import '../../css/roundSixteen.css'
+import fifa from "../../img/fifa-qatar-2022-logo.png";
 import { connect } from 'react-redux'
-import {save4} from '../actions'
-import round4 from '../data/round4'
+import {save4} from '../../actions'
+import round4 from '../../data/round4'
 import { useNavigate } from "react-router-dom";
 import { Helmet } from 'react-helmet-async';
+import { useTranslation } from 'react-i18next'
 
 
 
@@ -16,6 +17,8 @@ const Round8 = ({data3, onSave4}) => {
     const [round8Data, setRound8Data] = useState(data3)
     const [alertState, setOpenAlert] = useState(false)
     let navigate = useNavigate();
+    const { t } = useTranslation();
+
 
 
 
@@ -103,14 +106,14 @@ const Round8 = ({data3, onSave4}) => {
             <div className="container-info-round16">
                 <img src={fifa} alt="fifa world cup logo" className="world-cup-logo-round16"></img>
                 <div className="container-info-heading-round16">
-                    <h2>WORLD CUP QATAR 2022</h2>
-                    <h3>Quarterfinals</h3>
+                    <h2 className="he2">{t("FIFA World")}</h2>
+                    <h3 className="he3">{t("Quarterfinals")}</h3>
                 </div>
             </div>
             {alertState && 
                     <div className="alert">
                         <span className="closebtn" onClick={() => setOpenAlert(false)}>&times;</span>
-                        Please complete all winner boxes
+                        {t("Please complete all winner boxes")}
                     </div>
             }
                <div className="gridContainerRound16">
@@ -124,7 +127,7 @@ const Round8 = ({data3, onSave4}) => {
                                 className="mainItemRound16"
                                 key={columnId}
                             >
-                                <h3>{column.name}</h3>
+                                <h3 className="he3">{column.name}</h3>
                                 <div>
                                 <Droppable droppableId={columnId} key={columnId}>
                                     {(provided, snapshot) => {
@@ -133,7 +136,8 @@ const Round8 = ({data3, onSave4}) => {
                                         {...provided.droppableProps}
                                         style={{ backgroundColor: snapshot.isDraggingOver ? '#49bce4' : '#FFD700' }}
                                         ref={provided.innerRef}
-                                        className="droppableRound16"
+                                        className={`droppableRound16 ${columnId === "Game18" || columnId === "Game38"?"yes":columnId === "Game28" || columnId === "Game48"?"no":""}`}
+
                                         >
                                         {column.items.map((item, index) => {
                                             return (
@@ -176,7 +180,7 @@ const Round8 = ({data3, onSave4}) => {
                         })}
                         </DragDropContext>
                     </div>
-                    <button className="container-btn-round16" onClick={onConfirmSelection}>Go To Semifinals</button>
+                    <button className="container-btn-round16" onClick={onConfirmSelection}>{t("Go To Semifinals")}</button>
                   
             </div>  }
         </>

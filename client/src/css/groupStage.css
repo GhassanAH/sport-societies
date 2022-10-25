@@ -1,16 +1,17 @@
 *{
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family:Verdana, Geneva, Tahoma, sans-serif !important;
+    
 }
 .wrapper .main .mainContainer{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width:90% ;
+    width:100% ;
     color: #fff;
-    margin-bottom: 3rem;
+    background-color: #800020;
    
-    
+
 
 }
 .wrapper .main .mainContainer .container-info{
@@ -33,9 +34,20 @@
     justify-content: center;
     flex-direction: column;
     width: 70%;
-    font-size: 100%;
+
+
+}
+.wrapper .main .mainContainer .container-info .container-info-heading .he2{
+    font-size: 1.5rem;
     text-transform: uppercase;
     text-align: center;
+    font-weight: bold;
+}
+.wrapper .main .mainContainer .container-info .container-info-heading .he3{
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
 
 }
 .wrapper .main .mainContainer .gridContainer{
@@ -43,6 +55,11 @@
     grid-template-columns: auto auto auto auto;
     gap: 10px;
     
+}
+.wrapper .main .mainContainer .gridContainer .mainItem .he3{
+    font-size: 20px;
+    font-weight: bold;
+
 }
 .wrapper .main .mainContainer .gridContainer .mainItem .column-selector{
     display: flex;
@@ -93,10 +110,6 @@
 
 }
 @media (max-width: 1200px){
-    .wrapper .main .mainContainer{
-        width:95% ;
-        
-    }
     .wrapper .main .mainContainer .container-info{
         width: 90%;
     
@@ -108,13 +121,25 @@
     }
     .wrapper .main .mainContainer .container-info .container-info-heading{
         width: 60%;
-        font-size: 80%;
 
+    }
+    .wrapper .main .mainContainer .container-info .container-info-heading .he2{
+        font-size: 1.3rem;
+
+    }
+    .wrapper .main .mainContainer .container-info .container-info-heading .he3{
+        font-size: 1.1rem;
+    
     }
     .wrapper .main .mainContainer .gridContainer{
         grid-template-columns: auto auto auto;
         gap: 5px;
         
+    }
+    .wrapper .main .mainContainer .gridContainer .mainItem .he3{
+        font-size: 18px;
+  
+    
     }
     .wrapper .main .mainContainer .gridContainer .mainItem .column-selector{
         padding: 8px;
@@ -134,27 +159,46 @@
     }
     .wrapper .main .mainContainer .container-btn{
         width: 80%;
+        font-size: 1.3rem;
       
     }
 }
 @media (max-width: 800px){
     .wrapper .main .mainContainer .container-info .container-info-heading{
         width: 80%;
-        font-size: 40%;
 
+    }
+    .wrapper .main .mainContainer .container-info .container-info-heading .he2{
+        font-size: 1.1rem;
+
+    }
+    .wrapper .main .mainContainer .container-info .container-info-heading .he3{
+        font-size: .9rem;
+    
     }
     .wrapper .main .mainContainer .gridContainer{
         grid-template-columns: auto auto;
         
     }
     .wrapper .main .mainContainer .container-btn{
-        width: 100%;
-        font-size: 100%;
+        width: 80%;
+        font-size: 1rem;
     }
 }
 @media (max-width: 550px){
     .wrapper .main .mainContainer .gridContainer{
         grid-template-columns: auto;
         
+    }
+    .wrapper .main .mainContainer .container-info .container-info-heading .he2{
+        font-size: .9rem;
+
+    }
+    .wrapper .main .mainContainer .container-info .container-info-heading .he3{
+        font-size: .7rem;
+    
+    }
+    .wrapper .main .mainContainer .container-btn{
+        font-size: .8rem;
     }
 }

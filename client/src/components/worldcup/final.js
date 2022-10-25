@@ -1,13 +1,14 @@
 import React,{useState} from 'react';
 import {DragDropContext, Draggable, Droppable} from "react-beautiful-dnd"
-import '../css/roundSixteen.css'
-import fifa from "../img/fifa-qatar-2022-logo.png";
-import trophy from "../img/worldCup.png";
+import '../../css/roundSixteen.css'
+import fifa from "../../img/fifa-qatar-2022-logo.png";
+import trophy from "../../img/worldCup.png";
 import { connect } from 'react-redux'
-import {saveWinner} from '../actions'
-import winner from '../data/winner'
+import {saveWinner} from '../../actions'
+import winner from '../../data/winner'
 import { useNavigate } from "react-router-dom";
 import { Helmet } from 'react-helmet-async';
+import { useTranslation } from 'react-i18next'
 
 
 
@@ -19,6 +20,7 @@ const Fianl = ({data5, onSaveWinner}) => {
     const [final, setFinalData] = useState(data5)
     const [alertState, setOpenAlert] = useState(false)
     let navigate = useNavigate();
+    const { t } = useTranslation();
 
 
 
@@ -104,8 +106,8 @@ const Fianl = ({data5, onSaveWinner}) => {
                 <div className="container-info-round16">
                     <img src={fifa} alt="fifa world cup logo" className="world-cup-logo-round16"></img>
                     <div className="container-info-heading-round16">
-                        <h1>WORLD CUP QATAR 2022</h1>
-                        <h2>World Cup Final</h2>
+                        <h1 className="he2">{t("FIFA World")}</h1>
+                        <h2 className="he3">{t("World Cup Final")}</h2>
                         
                     </div>
                     
@@ -113,7 +115,7 @@ const Fianl = ({data5, onSaveWinner}) => {
                 {alertState && 
                     <div className="alert">
                         <span className="closebtn" onClick={() => setOpenAlert(false)}>&times;</span>
-                        Please complete all winner boxes
+                        {t("Please complete all winner boxes")}
                     </div>
                 }
                <img src={trophy} alt="world cup trophy" className="world-cup-trophy-round16"></img>
@@ -128,7 +130,7 @@ const Fianl = ({data5, onSaveWinner}) => {
                                 className="mainItemRound16"
                                 key={columnId}
                             >
-                                <h3>{column.name}</h3>
+                                <h3 className="he3">{column.name}</h3>
                                 <div>
                                 <Droppable droppableId={columnId} key={columnId}>
                                     {(provided, snapshot) => {
@@ -137,7 +139,8 @@ const Fianl = ({data5, onSaveWinner}) => {
                                         {...provided.droppableProps}
                                         style={{ backgroundColor: snapshot.isDraggingOver ? '#49bce4' : '#FFD700' }}
                                         ref={provided.innerRef}
-                                        className="droppableRound16"
+                                        className={`droppableRound16 ${columnId === "Game12"?"yes":""}`}
+
                                         >
                                         {column.items.map((item, index) => {
                                             return (
@@ -180,7 +183,7 @@ const Fianl = ({data5, onSaveWinner}) => {
                         })}
                         </DragDropContext>
                     </div>
-                    <button className="container-btn-round16" onClick={onConfirmSelection}>Go To Summary</button>
+                    <button className="container-btn-round16" onClick={onConfirmSelection}>{t("Go To Summary")}</button>
                   
             </div>  }
         </>

@@ -1,12 +1,13 @@
 import React,{useEffect, useState, useRef} from 'react'
 import { connect } from 'react-redux'
-import '../css/summary.css'
-import fifa from "../img/fifa-qatar-2022-logo.png";
-import worldCup from "../img/worldCup2.jpeg"
+import '../../css/summary.css'
+import fifa from "../../img/fifa-qatar-2022-logo.png";
+import worldCup from "../../img/worldCup2.jpeg"
 import { useNavigate } from "react-router-dom";
 import { Helmet } from 'react-helmet-async';
 import { toBlob, toJpeg } from 'html-to-image';
 import Resizer from "react-image-file-resizer";
+import { useTranslation } from 'react-i18next'
 
 
 
@@ -22,6 +23,8 @@ const Summary = ({data, data2, data3, data4,data5,data6}) => {
     const [roundf1, setRoundf1] = useState(null)
     const ref = useRef(null);
     let navigate = useNavigate();
+    const { t } = useTranslation();
+
 
 
 
@@ -100,7 +103,7 @@ const Summary = ({data, data2, data3, data4,data5,data6}) => {
         window.localStorage.removeItem("round8")
         window.localStorage.removeItem("final")
         window.localStorage.removeItem("winner")
-        navigate("/",{ replace: true })
+        navigate("/worldcupHome",{ replace: true })
       
         
     }
@@ -146,8 +149,8 @@ const Summary = ({data, data2, data3, data4,data5,data6}) => {
                     <div className="container-info-Summary">
                         <img src={fifa} alt="fifa world cup logo" className="world-cup-logo-Summary"></img>
                         <div className="container-info-heading-Summary">
-                            <h2>WORLD CUP QATAR 2022</h2>
-                            <h3>Prediction Summary</h3>
+                            <h2 className="he2">{t("FIFA World")}</h2>
+                            <h3 className="he3">{t("Prediction Summary")}</h3>
                             
                         </div>
                     </div>
@@ -410,7 +413,7 @@ const Summary = ({data, data2, data3, data4,data5,data6}) => {
                     </div>
                 </div>
                
-                <button className="container-btn-Summary" onClick={onDownload}>Download Your Prediction</button>
+                <button className="container-btn-Summary" onClick={onDownload}>{t("Download Your Prediction")}</button>
             </div>
         </>
         

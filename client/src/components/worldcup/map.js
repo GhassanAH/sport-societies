@@ -1,13 +1,14 @@
 import React,{useState, useEffect,} from 'react';
 import {DragDropContext, Draggable, Droppable} from "react-beautiful-dnd"
-import '../css/groupStage.css'
-import  data  from '../data/columns';
-import fifa from "../img/fifa-qatar-2022-logo.png";
+import '../../css/groupStage.css'
+import  data  from '../../data/columns';
+import fifa from "../../img/fifa-qatar-2022-logo.png";
 import { useNavigate,  } from "react-router-dom";
 import { connect } from 'react-redux'
-import {saveGrops, save16} from '../actions'
-import round16 from '../data/round16'
+import {saveGrops, save16} from '../../actions'
+import round16 from '../../data/round16'
 import { Helmet } from 'react-helmet-async';
+import { useTranslation } from 'react-i18next'
 
 
 
@@ -16,6 +17,7 @@ import { Helmet } from 'react-helmet-async';
 const WorldMap = ({onSaveGroups, onSave16}) => {
     const [DataColumns, setColumns] = useState(data)
     let navigate = useNavigate();
+    const { t } = useTranslation();
     
 
     useEffect(() => {
@@ -96,8 +98,8 @@ const WorldMap = ({onSaveGroups, onSave16}) => {
                     <div className="container-info">
                         <img src={fifa} alt="fifa world cup logo" className="world-cup-logo"></img>
                         <div className="container-info-heading">
-                            <h2>WORLD CUP QATAR 2022</h2>
-                            <h3>Groups</h3>
+                            <h2 className="he2">{t("FIFA World")}</h2>
+                            <h3 className="he3">{t("GROUPS")}</h3>
                         </div>
                     </div>
                     
@@ -112,7 +114,7 @@ const WorldMap = ({onSaveGroups, onSave16}) => {
                                 className="mainItem"
                                 key={columnId}
                             >
-                                <h3>{column.name}</h3>
+                                <h3 className="he3">{column.name}</h3>
                                 <div>
                                 <Droppable droppableId={columnId} key={columnId}>
                                     {(provided, snapshot) => {
@@ -167,7 +169,7 @@ const WorldMap = ({onSaveGroups, onSave16}) => {
                         })}
                         </DragDropContext>
                     </div>
-                    <button className="container-btn" onClick={onConfirmSelection}>Go To Round 16</button>
+                    <button className="container-btn" onClick={onConfirmSelection}>{t("Go To Round 16")}</button>
                 </div>
            </>
         )

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Suspense} from 'react';
 import ReactDOM from 'react-dom/client';
 import {configureStore} from '@reduxjs/toolkit'
 import { Provider } from 'react-redux';
@@ -6,6 +6,8 @@ import App from './App';
 import reducers from './reducers';
 import thunk from 'redux-thunk';
 import {HelmetProvider} from "react-helmet-async"
+import './i18n.js'
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const store = configureStore({middleware:[thunk], reducer:reducers})
@@ -13,7 +15,9 @@ root.render(
 
     <Provider store={store}>
         <HelmetProvider>
-             <App />
+            <Suspense fallback="loading...">
+                <App />
+            </Suspense>
         </HelmetProvider>
     </Provider>
  
