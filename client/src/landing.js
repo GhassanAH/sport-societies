@@ -1,7 +1,10 @@
 import React from 'react'
 import './css/landing.css'
 import {Carousel,Card,Row,Col,Container,Button} from 'react-bootstrap'
-import fifa from "./img/cm-flag.gif";
+import h1 from "./img/h1.png"
+import h2 from "./img/h2.jpg"
+import h3 from "./img/h5.jpg"
+import h4 from "./img/h4.png"
 import uefa from "./img/uefa.jpg";
 import premier from "./img/premier.jpg";
 import lal from "./img/lal.jpg";
@@ -32,7 +35,7 @@ const Landing = () => {
                             className="c-item"
                             width="800px"
                             height="400px"
-                            src={fifa}
+                            src={h1}
                             alt="First slide"
                             
                             
@@ -47,7 +50,7 @@ const Landing = () => {
                             className="c-item"
                             width="800px"
                             height="400px"
-                            src={fifa}
+                            src={h2}
                             alt="Second slide"
                         />
                 
@@ -61,7 +64,22 @@ const Landing = () => {
                             className="c-item"
                             width="800px"
                             height="400px"
-                            src={fifa}
+                            src={h3}
+                            alt="Third slide"
+                        />
+                
+                        <Carousel.Caption >
+                            <h3>CHAT WITH YOUR TRAINER, AND DO NOT BE FAT</h3>
+                            <p>Send positive messages to your contacts, learn any language, speak your language, and always share love.</p>
+                        </Carousel.Caption>
+                        
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img
+                            className="c-item"
+                            width="800px"
+                            height="400px"
+                            src={h4}
                             alt="Third slide"
                         />
                 
